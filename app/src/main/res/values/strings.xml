@@ -60,4 +60,21 @@
     <string name="ask_welcome">Hi! I\'m Zira, your AI study companion. Ask me anything about your subjects and I\'ll explain it step by step.</string>
     <string name="zira_thinking">Zira is thinking…</string>
     <string name="zira_avatar_desc">Zira avatar</string>
+
+    <!-- Flashcards -->
+    <string name="flashcard_generate">Generate New Deck</string>
+    <string name="flashcard_review">Review Due</string>
+    <string name="flashcard_review_all">Review All Due</string>
+    <string name="flashcard_count">%d cards</string>
+    <string name="flashcard_due">%d due today</string>
+    <string name="flashcard_empty">Generate your first deck to start studying with spaced repetition!</string>
+    <string name="flashcard_tap_to_flip">Tap to flip</string>
+    <string name="flashcard_rate_prompt">How well did you know this?</string>
+    <string name="flashcard_rate_subtitle">This helps Zira schedule your next review</string>
+    <string name="flashcard_easy">Easy · +7 days</string>
+    <string name="flashcard_medium">Medium · +3 days</string>
+    <string name="flashcard_hard">Hard · tomorrow</string>
+    <string name="flashcard_progress">Card %1$d of %2$d</string>
+    <string name="flashcard_no_due">No cards due for review right now. Great job!</string>
+    <string name="flashcard_review_complete">Review complete! Keep up the streak.</string>
 </resources>

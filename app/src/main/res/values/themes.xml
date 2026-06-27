@@ -43,6 +43,10 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="TextAppearance.Zira.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="TextAppearance.Zira.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:textSize">16sp</item>
     </style>

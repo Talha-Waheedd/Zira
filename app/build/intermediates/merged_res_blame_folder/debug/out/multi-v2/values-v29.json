@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zira.app-mergeDebugResources-37:/values-v29/values-v29.xml",
+            "outputFile": "com.zira.app-mergeDebugResources-41:/values-v29/values-v29.xml",
             "map": [
                 {
                     "source": "C:\\Users\\talha\\.gradle\\caches\\transforms-3\\76ea385c84c79903921e899cf3ea1d61\\transformed\\jetified-core-splashscreen-1.0.1\\res\\values-v29\\values-v29.xml",

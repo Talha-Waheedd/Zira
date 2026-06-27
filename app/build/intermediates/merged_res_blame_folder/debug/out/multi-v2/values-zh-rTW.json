@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zira.app-mergeDebugResources-37:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.zira.app-mergeDebugResources-41:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\talha\\.gradle\\caches\\transforms-3\\fcca1ec8a24b81ad44128eab24f66b74\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-zh-rTW\\values.xml",

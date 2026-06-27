@@ -54,6 +54,11 @@
             android:launchMode="singleTop" />
 
         <activity
+            android:name=".ui.flashcards.FlashcardReviewActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.flashcards.FlashcardActivity" />
+
+        <activity
             android:name=".ui.progress.ProgressActivity"
             android:exported="false"
             android:launchMode="singleTop" />

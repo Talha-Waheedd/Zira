@@ -4,11 +4,15 @@ package com.zira.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.zira.app.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,10 +25,28 @@ public final class ActivityFlashcardBinding implements ViewBinding {
   @NonNull
   public final BottomNavBinding bottomNav;
 
+  @NonNull
+  public final LinearLayout emptyState;
+
+  @NonNull
+  public final LinearProgressIndicator progressGenerating;
+
+  @NonNull
+  public final RecyclerView recyclerDecks;
+
+  @NonNull
+  public final MaterialToolbar toolbar;
+
   private ActivityFlashcardBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavBinding bottomNav) {
+      @NonNull BottomNavBinding bottomNav, @NonNull LinearLayout emptyState,
+      @NonNull LinearProgressIndicator progressGenerating, @NonNull RecyclerView recyclerDecks,
+      @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
+    this.emptyState = emptyState;
+    this.progressGenerating = progressGenerating;
+    this.recyclerDecks = recyclerDecks;
+    this.toolbar = toolbar;
   }
 
   @Override
@@ -61,7 +83,32 @@ public final class ActivityFlashcardBinding implements ViewBinding {
       }
       BottomNavBinding binding_bottomNav = BottomNavBinding.bind(bottomNav);
 
-      return new ActivityFlashcardBinding((ConstraintLayout) rootView, binding_bottomNav);
+      id = R.id.emptyState;
+      LinearLayout emptyState = ViewBindings.findChildViewById(rootView, id);
+      if (emptyState == null) {
+        break missingId;
+      }
+
+      id = R.id.progressGenerating;
+      LinearProgressIndicator progressGenerating = ViewBindings.findChildViewById(rootView, id);
+      if (progressGenerating == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerDecks;
+      RecyclerView recyclerDecks = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerDecks == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      return new ActivityFlashcardBinding((ConstraintLayout) rootView, binding_bottomNav,
+          emptyState, progressGenerating, recyclerDecks, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

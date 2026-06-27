@@ -1,16 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-68:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-68:12
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] C:\Users\talha\.gradle\caches\transforms-3\08f855bc17ab11e7dfd66d8c7ce8f212\transformed\jetified-viewbinding-8.2.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\talha\.gradle\caches\transforms-3\c6ae65a20c9514d168cda264a8797175\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.airbnb.android:lottie:6.3.0] C:\Users\talha\.gradle\caches\transforms-3\68f0936f599541460e8b698559ed3f33\transformed\jetified-lottie-6.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\talha\.gradle\caches\transforms-3\6a1a0540ed9e2a162802e248d2e0999f\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\talha\.gradle\caches\transforms-3\43c623acd127f7ac6da0ecc92ac2ccec\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\208e97529a25089c61c67d4d64cf46e4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\talha\.gradle\caches\transforms-3\5124f2b4dda275e5988faf3778a0802f\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\talha\.gradle\caches\transforms-3\b5e6799c08a7ce1ae77341842d33270b\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\talha\.gradle\caches\transforms-3\0fd383fbe9c12632bf72a03f4856e59d\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\talha\.gradle\caches\transforms-3\bc85c1d1792562feb44cd31c3f3e690b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
 MERGED from [com.google.firebase:firebase-auth:22.3.0] C:\Users\talha\.gradle\caches\transforms-3\cd2a3991d3988f6ec47c9e10e356c37a\transformed\jetified-firebase-auth-22.3.0\AndroidManifest.xml:17:1-75:12
@@ -39,8 +40,8 @@ MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\talha\.g
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\talha\.gradle\caches\transforms-3\5a206094061d01b0a4c48ca687ae62d7\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\2a66eb27b456b43948f03499cb54a659\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\a7e983ac3235771bc145c6be04bce9fe\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\033a0f919f12387501151ea19541cb3e\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\talha\.gradle\caches\transforms-3\a8675546cc357e67f5af889d355826b8\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\7e29f0bbaa9b54b653ff2205c0f86cec\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\talha\.gradle\caches\transforms-3\f2ceee3b41e9d2103f1462dada0b033d\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\ad731b604e4769a0aa8c7c9f83ed128b\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\d8ff854cf042713c5d5edc3b8fb1382d\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -51,10 +52,13 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\talha\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\talha\.gradle\caches\transforms-3\084e0f05113086a40c0b72296da21a4c\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\talha\.gradle\caches\transforms-3\b545a5bcdef6d8c8b6ad1aca75694957\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\talha\.gradle\caches\transforms-3\76ea385c84c79903921e899cf3ea1d61\transformed\jetified-core-splashscreen-1.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\c5322ad0418e12e2fdd78ab3d1372e5b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\8f62d14a893f13d128292228d19e7c29\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\talha\.gradle\caches\transforms-3\85f7ad07438085a16cada9f53239b361\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\talha\.gradle\caches\transforms-3\bb46358c015d9ef29f3d9a6b62ecc5a3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\talha\.gradle\caches\transforms-3\b1da186577e3c48208860b7db5b021c5\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\talha\.gradle\caches\transforms-3\4642d90c679fdc248ce5208e848ca220\transformed\sqlite-2.4.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\38440eaa32224b8adf9d15305a62e32d\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\talha\.gradle\caches\transforms-3\694e0af477413cd3eac331e8459c1538\transformed\jetified-firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\talha\.gradle\caches\transforms-3\d1701b99e9933bb36bd9dc1bc180d41d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
@@ -97,8 +101,8 @@ MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\talha\.gradle\caches\transfor
 	android:name
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-66:19
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-66:19
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-71:19
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-71:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\talha\.gradle\caches\transforms-3\c6ae65a20c9514d168cda264a8797175\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -131,6 +135,8 @@ MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\talh
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\talha\.gradle\caches\transforms-3\fcca1ec8a24b81ad44128eab24f66b74\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.core:core:1.9.0] C:\Users\talha\.gradle\caches\transforms-3\06b84cc674388d2a1b81993cbacf6cc8\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.9.0] C:\Users\talha\.gradle\caches\transforms-3\06b84cc674388d2a1b81993cbacf6cc8\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\talha\.gradle\caches\transforms-3\bb46358c015d9ef29f3d9a6b62ecc5a3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\talha\.gradle\caches\transforms-3\bb46358c015d9ef29f3d9a6b62ecc5a3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\talha\.gradle\caches\transforms-3\d1701b99e9933bb36bd9dc1bc180d41d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
@@ -221,22 +227,30 @@ ADDED from D:\Zira\app\src\main\AndroidManifest.xml:51:9-54:46
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:53:13-37
 	android:name
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:52:13-60
-activity#com.zira.app.ui.progress.ProgressActivity
-ADDED from D:\Zira\app\src\main\AndroidManifest.xml:56:9-59:46
-	android:launchMode
-		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:59:13-43
+activity#com.zira.app.ui.flashcards.FlashcardReviewActivity
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:56:9-59:77
+	android:parentActivityName
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:59:13-74
 	android:exported
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:58:13-37
 	android:name
-		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:57:13-57
-activity#com.zira.app.ui.profile.ProfileActivity
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:57:13-66
+activity#com.zira.app.ui.progress.ProgressActivity
 ADDED from D:\Zira\app\src\main\AndroidManifest.xml:61:9-64:46
 	android:launchMode
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:64:13-43
 	android:exported
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:62:13-55
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:62:13-57
+activity#com.zira.app.ui.profile.ProfileActivity
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:66:9-69:46
+	android:launchMode
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:69:13-43
+	android:exported
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:68:13-37
+	android:name
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:67:13-55
 uses-sdk
 INJECTED from D:\Zira\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Zira\app\src\main\AndroidManifest.xml
@@ -253,8 +267,10 @@ MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\talha\.gradl
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\talha\.gradle\caches\transforms-3\6a1a0540ed9e2a162802e248d2e0999f\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\talha\.gradle\caches\transforms-3\43c623acd127f7ac6da0ecc92ac2ccec\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\talha\.gradle\caches\transforms-3\43c623acd127f7ac6da0ecc92ac2ccec\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\208e97529a25089c61c67d4d64cf46e4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\208e97529a25089c61c67d4d64cf46e4\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\talha\.gradle\caches\transforms-3\5124f2b4dda275e5988faf3778a0802f\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\talha\.gradle\caches\transforms-3\5124f2b4dda275e5988faf3778a0802f\transformed\jetified-viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\talha\.gradle\caches\transforms-3\b5e6799c08a7ce1ae77341842d33270b\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\talha\.gradle\caches\transforms-3\b5e6799c08a7ce1ae77341842d33270b\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\talha\.gradle\caches\transforms-3\0fd383fbe9c12632bf72a03f4856e59d\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\talha\.gradle\caches\transforms-3\0fd383fbe9c12632bf72a03f4856e59d\transformed\jetified-emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\talha\.gradle\caches\transforms-3\bc85c1d1792562feb44cd31c3f3e690b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:21:5-44
@@ -311,10 +327,10 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\tal
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\2a66eb27b456b43948f03499cb54a659\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\a7e983ac3235771bc145c6be04bce9fe\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\a7e983ac3235771bc145c6be04bce9fe\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\033a0f919f12387501151ea19541cb3e\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\talha\.gradle\caches\transforms-3\033a0f919f12387501151ea19541cb3e\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\talha\.gradle\caches\transforms-3\a8675546cc357e67f5af889d355826b8\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\talha\.gradle\caches\transforms-3\a8675546cc357e67f5af889d355826b8\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\7e29f0bbaa9b54b653ff2205c0f86cec\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\7e29f0bbaa9b54b653ff2205c0f86cec\transformed\jetified-customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\talha\.gradle\caches\transforms-3\f2ceee3b41e9d2103f1462dada0b033d\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\talha\.gradle\caches\transforms-3\f2ceee3b41e9d2103f1462dada0b033d\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\ad731b604e4769a0aa8c7c9f83ed128b\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
@@ -335,6 +351,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\talha\.gradl
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\talha\.gradle\caches\transforms-3\b545a5bcdef6d8c8b6ad1aca75694957\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\talha\.gradle\caches\transforms-3\76ea385c84c79903921e899cf3ea1d61\transformed\jetified-core-splashscreen-1.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\talha\.gradle\caches\transforms-3\76ea385c84c79903921e899cf3ea1d61\transformed\jetified-core-splashscreen-1.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\c5322ad0418e12e2fdd78ab3d1372e5b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\c5322ad0418e12e2fdd78ab3d1372e5b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\8f62d14a893f13d128292228d19e7c29\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -343,6 +361,10 @@ MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\talha\.gradle\cache
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\talha\.gradle\caches\transforms-3\85f7ad07438085a16cada9f53239b361\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\talha\.gradle\caches\transforms-3\bb46358c015d9ef29f3d9a6b62ecc5a3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\talha\.gradle\caches\transforms-3\bb46358c015d9ef29f3d9a6b62ecc5a3\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\talha\.gradle\caches\transforms-3\b1da186577e3c48208860b7db5b021c5\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\talha\.gradle\caches\transforms-3\b1da186577e3c48208860b7db5b021c5\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\talha\.gradle\caches\transforms-3\4642d90c679fdc248ce5208e848ca220\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\talha\.gradle\caches\transforms-3\4642d90c679fdc248ce5208e848ca220\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\38440eaa32224b8adf9d15305a62e32d\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\38440eaa32224b8adf9d15305a62e32d\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\talha\.gradle\caches\transforms-3\694e0af477413cd3eac331e8459c1538\transformed\jetified-firebase-components-17.1.5\AndroidManifest.xml:18:5-44
@@ -539,6 +561,16 @@ uses-permission#com.zira.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.9.0] C:\Users\talha\.gradle\caches\transforms-3\06b84cc674388d2a1b81993cbacf6cc8\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.9.0] C:\Users\talha\.gradle\caches\transforms-3\06b84cc674388d2a1b81993cbacf6cc8\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\talha\.gradle\caches\transforms-3\d1701b99e9933bb36bd9dc1bc180d41d\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value

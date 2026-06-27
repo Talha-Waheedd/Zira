@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/flashcard_rate_prompt"
+        android:textAppearance="@style/TextAppearance.Zira.TitleLarge"
+        android:textColor="@color/on_background" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="@string/flashcard_rate_subtitle"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="@color/on_surface_variant" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEasy"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/flashcard_easy" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMedium"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/flashcard_medium" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHard"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/flashcard_hard" />
+
+</LinearLayout>

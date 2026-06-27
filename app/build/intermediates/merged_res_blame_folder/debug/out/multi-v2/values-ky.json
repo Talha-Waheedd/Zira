@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zira.app-mergeDebugResources-37:/values-ky/values-ky.xml",
+            "outputFile": "com.zira.app-mergeDebugResources-41:/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "C:\\Users\\talha\\.gradle\\caches\\transforms-3\\43c623acd127f7ac6da0ecc92ac2ccec\\transformed\\appcompat-1.6.1\\res\\values-ky\\values-ky.xml",

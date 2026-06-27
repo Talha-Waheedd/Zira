@@ -1849,6 +1849,7 @@
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
     <item name="home" type="id"/>
+    <item name="is_pooling_container_tag" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
@@ -1870,6 +1871,7 @@
     <item name="navigation_bar_item_large_label_view" type="id"/>
     <item name="navigation_bar_item_small_label_view" type="id"/>
     <item name="parent_matrix" type="id"/>
+    <item name="pooling_container_listener_holder_tag" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="report_drawn" type="id"/>
@@ -2022,6 +2024,10 @@
     <string name="app_name">Zira</string>
     <string name="app_tagline">AI Study Companion</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="ask_hint">Ask Zira anything…</string>
+    <string name="ask_send">Send</string>
+    <string name="ask_title">Ask Zira</string>
+    <string name="ask_welcome">Hi! I\'m Zira, your AI study companion. Ask me anything about your subjects and I\'ll explain it step by step.</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an accessibility action to collapse the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
     <string description="A description of an accessibility action to expand the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_expand">Expand the bottom sheet</string>
@@ -2071,6 +2077,21 @@
     <string name="fallback_menu_item_copy_link">Copy link</string>
     <string name="fallback_menu_item_open_in_browser">Open in browser</string>
     <string name="fallback_menu_item_share_link">Share link</string>
+    <string name="flashcard_count">%d cards</string>
+    <string name="flashcard_due">%d due today</string>
+    <string name="flashcard_easy">Easy · +7 days</string>
+    <string name="flashcard_empty">Generate your first deck to start studying with spaced repetition!</string>
+    <string name="flashcard_generate">Generate New Deck</string>
+    <string name="flashcard_hard">Hard · tomorrow</string>
+    <string name="flashcard_medium">Medium · +3 days</string>
+    <string name="flashcard_no_due">No cards due for review right now. Great job!</string>
+    <string name="flashcard_progress">Card %1$d of %2$d</string>
+    <string name="flashcard_rate_prompt">How well did you know this?</string>
+    <string name="flashcard_rate_subtitle">This helps Zira schedule your next review</string>
+    <string name="flashcard_review">Review Due</string>
+    <string name="flashcard_review_all">Review All Due</string>
+    <string name="flashcard_review_complete">Review complete! Keep up the streak.</string>
+    <string name="flashcard_tap_to_flip">Tap to flip</string>
     <string name="gcm_defaultSenderId" translatable="false">730863093458</string>
     <string name="get_started">Get Started</string>
     <string name="google_api_key" translatable="false">AIzaSyC8bHgx2HwtmghpLFo9ZEZ-b0_RKnv98-k</string>
@@ -2228,6 +2249,8 @@
     <string name="subject_physics">Physics</string>
     <string name="welcome_subtitle">Your AI-powered study companion for Pakistani university students</string>
     <string name="welcome_title">Welcome to Zira</string>
+    <string name="zira_avatar_desc">Zira avatar</string>
+    <string name="zira_thinking">Zira is thinking…</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -6455,6 +6478,9 @@
     </style>
     <style name="TextAppearance.Zira.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:textSize">22sp</item>
+    </style>
+    <style name="TextAppearance.Zira.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">16sp</item>
     </style>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>

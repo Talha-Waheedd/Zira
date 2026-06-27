@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zira.app-mergeDebugResources-37:/values-sq/values-sq.xml",
+            "outputFile": "com.zira.app-mergeDebugResources-41:/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "C:\\Users\\talha\\.gradle\\caches\\transforms-3\\06b84cc674388d2a1b81993cbacf6cc8\\transformed\\core-1.9.0\\res\\values-sq\\values-sq.xml",

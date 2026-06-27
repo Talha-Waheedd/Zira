@@ -4,11 +4,18 @@ package com.zira.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.zira.app.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,10 +28,41 @@ public final class ActivityAskBinding implements ViewBinding {
   @NonNull
   public final BottomNavBinding bottomNav;
 
+  @NonNull
+  public final TextInputEditText etQuestion;
+
+  @NonNull
+  public final FloatingActionButton fabSend;
+
+  @NonNull
+  public final LinearLayout inputBar;
+
+  @NonNull
+  public final LottieAnimationView lottieTyping;
+
+  @NonNull
+  public final RecyclerView recyclerMessages;
+
+  @NonNull
+  public final TextInputLayout tilQuestion;
+
+  @NonNull
+  public final MaterialToolbar toolbar;
+
   private ActivityAskBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavBinding bottomNav) {
+      @NonNull BottomNavBinding bottomNav, @NonNull TextInputEditText etQuestion,
+      @NonNull FloatingActionButton fabSend, @NonNull LinearLayout inputBar,
+      @NonNull LottieAnimationView lottieTyping, @NonNull RecyclerView recyclerMessages,
+      @NonNull TextInputLayout tilQuestion, @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
+    this.etQuestion = etQuestion;
+    this.fabSend = fabSend;
+    this.inputBar = inputBar;
+    this.lottieTyping = lottieTyping;
+    this.recyclerMessages = recyclerMessages;
+    this.tilQuestion = tilQuestion;
+    this.toolbar = toolbar;
   }
 
   @Override
@@ -61,7 +99,50 @@ public final class ActivityAskBinding implements ViewBinding {
       }
       BottomNavBinding binding_bottomNav = BottomNavBinding.bind(bottomNav);
 
-      return new ActivityAskBinding((ConstraintLayout) rootView, binding_bottomNav);
+      id = R.id.etQuestion;
+      TextInputEditText etQuestion = ViewBindings.findChildViewById(rootView, id);
+      if (etQuestion == null) {
+        break missingId;
+      }
+
+      id = R.id.fabSend;
+      FloatingActionButton fabSend = ViewBindings.findChildViewById(rootView, id);
+      if (fabSend == null) {
+        break missingId;
+      }
+
+      id = R.id.inputBar;
+      LinearLayout inputBar = ViewBindings.findChildViewById(rootView, id);
+      if (inputBar == null) {
+        break missingId;
+      }
+
+      id = R.id.lottieTyping;
+      LottieAnimationView lottieTyping = ViewBindings.findChildViewById(rootView, id);
+      if (lottieTyping == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerMessages;
+      RecyclerView recyclerMessages = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerMessages == null) {
+        break missingId;
+      }
+
+      id = R.id.tilQuestion;
+      TextInputLayout tilQuestion = ViewBindings.findChildViewById(rootView, id);
+      if (tilQuestion == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      return new ActivityAskBinding((ConstraintLayout) rootView, binding_bottomNav, etQuestion,
+          fabSend, inputBar, lottieTyping, recyclerMessages, tilQuestion, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

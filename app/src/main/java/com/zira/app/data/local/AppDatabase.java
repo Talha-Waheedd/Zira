@@ -8,24 +8,21 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
 import com.zira.app.data.local.dao.ExplanationDao;
+import com.zira.app.data.local.dao.FlashcardDao;
 import com.zira.app.data.local.entity.ExplanationEntity;
+import com.zira.app.data.local.entity.FlashcardEntity;
 
-/**
- * The Zira Room database.
- *
- * <p>Day 6–8 introduces {@link ExplanationEntity} for offline explanation history.
- * {@code FlashcardEntity} and {@code QuizResultEntity} are added (with a version bump) on
- * Days 9–11.
- */
 @Database(
-        entities = {ExplanationEntity.class},
-        version = 1,
+        entities = {ExplanationEntity.class, FlashcardEntity.class},
+        version = 2,
         exportSchema = false
 )
 @TypeConverters(Converters.class)
 public abstract class AppDatabase extends RoomDatabase {
 
     public abstract ExplanationDao explanationDao();
+
+    public abstract FlashcardDao flashcardDao();
 
     private static volatile AppDatabase instance;
 

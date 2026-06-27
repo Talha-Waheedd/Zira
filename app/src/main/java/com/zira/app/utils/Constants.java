@@ -45,6 +45,24 @@ public final class Constants {
 
     public static final int RECENT_EXPLANATIONS_LIMIT = 10;
 
+    // Flashcards
+    public static final int FLASHCARD_DEFAULT_COUNT = 10;
+    public static final int SM2_EASY_DAYS = 7;
+    public static final int SM2_MEDIUM_DAYS = 3;
+    public static final int SM2_HARD_DAYS = 1;
+
+    public static final String EXTRA_REVIEW_SUBJECT = "extra_review_subject";
+
+    /** Pakistani university subjects shown on the deck list. */
+    public static final String[] DEFAULT_SUBJECTS = {
+            "Mathematics",
+            "Physics",
+            "Computer Science",
+            "Chemistry",
+            "Biology",
+            "Economics"
+    };
+
     public static final long SPLASH_DELAY_MS = 2000L;
 
     public static final int DEFAULT_DAILY_GOAL_MINS = 30;

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.zira.app-mergeDebugResources-37:/values-hr/values-hr.xml",
+            "outputFile": "com.zira.app-mergeDebugResources-41:/values-hr/values-hr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\talha\\.gradle\\caches\\transforms-3\\a8675546cc357e67f5af889d355826b8\\transformed\\browser-1.4.0\\res\\values-hr\\values-hr.xml",
