@@ -52,4 +52,12 @@
 
     <!-- Placeholders (screens built in later days) -->
     <string name="placeholder_coming_soon">Coming soon</string>
+
+    <!-- Ask Zira -->
+    <string name="ask_title">Ask Zira</string>
+    <string name="ask_hint">Ask Zira anything…</string>
+    <string name="ask_send">Send</string>
+    <string name="ask_welcome">Hi! I\'m Zira, your AI study companion. Ask me anything about your subjects and I\'ll explain it step by step.</string>
+    <string name="zira_thinking">Zira is thinking…</string>
+    <string name="zira_avatar_desc">Zira avatar</string>
 </resources>

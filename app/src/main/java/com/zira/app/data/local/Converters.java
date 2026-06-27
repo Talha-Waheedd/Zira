@@ -1,0 +1,34 @@
+package com.zira.app.data.local;
+
+import androidx.room.TypeConverter;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
+/** Room type converters for storing {@code List<String>} columns as JSON. */
+public class Converters {
+
+    private static final Gson GSON = new Gson();
+    private static final Type STRING_LIST_TYPE = new TypeToken<List<String>>() {
+    }.getType();
+
+    @TypeConverter
+    public static String fromStringList(List<String> value) {
+        if (value == null) {
+            return null;
+        }
+        return GSON.toJson(value, STRING_LIST_TYPE);
+    }
+
+    @TypeConverter
+    public static List<String> toStringList(String value) {
+        if (value == null) {
+            return new ArrayList<>();
+        }
+        return GSON.fromJson(value, STRING_LIST_TYPE);
+    }
+}

@@ -34,6 +34,17 @@ public final class Constants {
     public static final String FIELD_CREATED_AT = "createdAt";
     public static final String FIELD_ONBOARDING_COMPLETE = "onboardingComplete";
 
+    // Explanation / session document fields
+    public static final String FIELD_QUESTION = "question";
+    public static final String FIELD_EXPLANATION = "explanation";
+    public static final String FIELD_SUBJECT = "subject";
+    public static final String FIELD_KEY_CONCEPTS = "keyConceptsList";
+    public static final String FIELD_TIMESTAMP = "timestamp";
+
+    public static final String SUBJECT_GENERAL = "General";
+
+    public static final int RECENT_EXPLANATIONS_LIMIT = 10;
+
     public static final long SPLASH_DELAY_MS = 2000L;
 
     public static final int DEFAULT_DAILY_GOAL_MINS = 30;

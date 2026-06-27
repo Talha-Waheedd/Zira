@@ -2,33 +2,89 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/ask_title"
+        app:titleTextAppearance="@style/TextAppearance.Zira.TitleLarge" />
 
-        <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/lottieTyping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:listitem="@layout/item_message_zira" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieTyping"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/inputBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/typing_indicator" />
+
+    <LinearLayout
+        android:id="@+id/inputBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilQuestion"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/ask_hint"
+            app:boxCornerRadiusBottomEnd="24dp"
+            app:boxCornerRadiusBottomStart="24dp"
+            app:boxCornerRadiusTopEnd="24dp"
+            app:boxCornerRadiusTopStart="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSend"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nav_ask"
-            android:textAppearance="@style/TextAppearance.Zira.HeadlineLarge"
-            android:textColor="@color/on_background" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/placeholder_coming_soon"
-            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-            android:textColor="@color/on_surface_variant" />
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/ask_send"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_send"
+            app:tint="@color/on_primary" />
 
     </LinearLayout>
 
