@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFBFE</color>
+    <color name="error">#B3261E</color>
+    <color name="on_background">#1C1B1F</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#21005D</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_secondary_container">#1D192B</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="on_surface_variant">#49454F</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="on_tertiary_container">#31111D</color>
+    <color name="outline">#79747E</color>
+    <color name="primary">#6750A4</color>
+    <color name="primary_container">#EADDFF</color>
+    <color name="secondary">#625B71</color>
+    <color name="secondary_container">#E8DEF8</color>
+    <color name="seed">#6750A4</color>
+    <color name="splash_gradient_end">#7D5260</color>
+    <color name="splash_gradient_start">#6750A4</color>
+    <color name="surface">#FFFBFE</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="tertiary">#7D5260</color>
+    <color name="tertiary_container">#FFD8E4</color>
+    <color name="user_bubble">#EADDFF</color>
+    <color name="zira_bubble">#F3EDF7</color>
+    <string name="app_name">Zira</string>
+    <string name="app_tagline">AI Study Companion</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="display_name">Display Name</string>
+    <string name="email">Email</string>
+    <string name="error_auth_failed">Authentication failed. Please try again.</string>
+    <string name="error_empty_email">Please enter your email</string>
+    <string name="error_empty_name">Please enter your name</string>
+    <string name="error_empty_password">Please enter your password</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_no_subjects">Please select at least one subject</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="gcm_defaultSenderId" translatable="false">730863093458</string>
+    <string name="get_started">Get Started</string>
+    <string name="google_api_key" translatable="false">AIzaSyC8bHgx2HwtmghpLFo9ZEZ-b0_RKnv98-k</string>
+    <string name="google_app_id" translatable="false">1:730863093458:android:0d7b4524e1f35218da4f0b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC8bHgx2HwtmghpLFo9ZEZ-b0_RKnv98-k</string>
+    <string name="google_storage_bucket" translatable="false">zira-6f063.firebasestorage.app</string>
+    <string name="have_account">Already have an account? Sign In</string>
+    <string name="minutes_per_day">%d minutes per day</string>
+    <string name="nav_ask">Ask</string>
+    <string name="nav_flashcards">Flashcards</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_progress">Progress</string>
+    <string name="next">Next</string>
+    <string name="no_account">Don\'t have an account? Register</string>
+    <string name="password">Password</string>
+    <string name="pick_subjects">Pick Your Subjects</string>
+    <string name="pick_subjects_subtitle">Select the subjects you\'re studying this semester</string>
+    <string name="project_id" translatable="false">zira-6f063</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_up">Register</string>
+    <string name="skip">Skip</string>
+    <string name="study_goal">Set Your Daily Goal</string>
+    <string name="study_goal_subtitle">How many minutes do you want to study each day?</string>
+    <string name="subject_biology">Biology</string>
+    <string name="subject_chemistry">Chemistry</string>
+    <string name="subject_cs">Computer Science</string>
+    <string name="subject_economics">Economics</string>
+    <string name="subject_maths">Mathematics</string>
+    <string name="subject_physics">Physics</string>
+    <string name="welcome_subtitle">Your AI-powered study companion for Pakistani university students</string>
+    <string name="welcome_title">Welcome to Zira</string>
+    <style name="TextAppearance.Zira.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.Zira.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textSize">57sp</item>
+    </style>
+    <style name="TextAppearance.Zira.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.Zira.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="Theme.Zira" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.Zira.Splash" parent="Theme.Zira">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

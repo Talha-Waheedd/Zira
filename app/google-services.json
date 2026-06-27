@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "730863093458",
+    "project_id": "zira-6f063",
+    "storage_bucket": "zira-6f063.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730863093458:android:0d7b4524e1f35218da4f0b",
+        "android_client_info": {
+          "package_name": "com.zira.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8bHgx2HwtmghpLFo9ZEZ-b0_RKnv98-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

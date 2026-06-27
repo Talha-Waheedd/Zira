@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/fragment_study_goal.xml",
+        "source": "com.zira.app-main-41:/layout/fragment_study_goal.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/activity_home.xml",
+        "source": "com.zira.app-main-41:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/activity_login.xml",
+        "source": "com.zira.app-main-41:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/activity_splash.xml",
+        "source": "com.zira.app-main-41:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/fragment_subject_picker.xml",
+        "source": "com.zira.app-main-41:/layout/fragment_subject_picker.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/activity_onboarding.xml",
+        "source": "com.zira.app-main-41:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/activity_register.xml",
+        "source": "com.zira.app-main-41:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-38:/layout/fragment_welcome.xml",
+        "source": "com.zira.app-main-41:/layout/fragment_welcome.xml"
+    }
+]

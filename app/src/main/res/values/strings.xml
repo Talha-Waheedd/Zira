@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zira</string>
+    <string name="app_tagline">AI Study Companion</string>
+
+    <!-- Auth -->
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="display_name">Display Name</string>
+    <string name="no_account">Don\'t have an account? Register</string>
+    <string name="have_account">Already have an account? Sign In</string>
+    <string name="sign_out">Sign Out</string>
+
+    <!-- Onboarding -->
+    <string name="welcome_title">Welcome to Zira</string>
+    <string name="welcome_subtitle">Your AI-powered study companion for Pakistani university students</string>
+    <string name="pick_subjects">Pick Your Subjects</string>
+    <string name="pick_subjects_subtitle">Select the subjects you\'re studying this semester</string>
+    <string name="study_goal">Set Your Daily Goal</string>
+    <string name="study_goal_subtitle">How many minutes do you want to study each day?</string>
+    <string name="minutes_per_day">%d minutes per day</string>
+    <string name="next">Next</string>
+    <string name="get_started">Get Started</string>
+    <string name="skip">Skip</string>
+
+    <!-- Subjects -->
+    <string name="subject_maths">Mathematics</string>
+    <string name="subject_physics">Physics</string>
+    <string name="subject_cs">Computer Science</string>
+    <string name="subject_chemistry">Chemistry</string>
+    <string name="subject_biology">Biology</string>
+    <string name="subject_economics">Economics</string>
+
+    <!-- Errors -->
+    <string name="error_empty_email">Please enter your email</string>
+    <string name="error_empty_password">Please enter your password</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_empty_name">Please enter your name</string>
+    <string name="error_no_subjects">Please select at least one subject</string>
+    <string name="error_auth_failed">Authentication failed. Please try again.</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+
+    <!-- Home (placeholder for navigation) -->
+    <string name="nav_home">Home</string>
+    <string name="nav_ask">Ask</string>
+    <string name="nav_flashcards">Flashcards</string>
+    <string name="nav_progress">Progress</string>
+    <string name="nav_profile">Profile</string>
+</resources>
