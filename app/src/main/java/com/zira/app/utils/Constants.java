@@ -5,8 +5,19 @@ public final class Constants {
     private Constants() {
     }
 
+    /**
+     * Base URL of the Zira FastAPI backend. MUST end with a trailing slash.
+     * Replace with your deployed backend URL (e.g. "https://api.zira.app/").
+     */
+    public static final String BASE_URL = "https://your-backend-url.com/";
+
     public static final String PREFS_NAME = "zira_prefs";
     public static final String KEY_ONBOARDING_COMPLETE = "onboarding_complete";
+
+    // Difficulty levels accepted by the backend
+    public static final String DIFFICULTY_EASY = "easy";
+    public static final String DIFFICULTY_MEDIUM = "medium";
+    public static final String DIFFICULTY_HARD = "hard";
 
     public static final String COLLECTION_USERS = "users";
     public static final String COLLECTION_EXPLANATIONS = "explanations";

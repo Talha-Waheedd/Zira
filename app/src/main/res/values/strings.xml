@@ -43,10 +43,13 @@
     <string name="error_auth_failed">Authentication failed. Please try again.</string>
     <string name="error_network">Network error. Please check your connection.</string>
 
-    <!-- Home (placeholder for navigation) -->
+    <!-- Bottom navigation -->
     <string name="nav_home">Home</string>
     <string name="nav_ask">Ask</string>
     <string name="nav_flashcards">Flashcards</string>
     <string name="nav_progress">Progress</string>
     <string name="nav_profile">Profile</string>
+
+    <!-- Placeholders (screens built in later days) -->
+    <string name="placeholder_coming_soon">Coming soon</string>
 </resources>

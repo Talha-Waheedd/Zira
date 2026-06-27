@@ -3099,6 +3099,11 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_nav_ask
+drawable ic_nav_flashcards
+drawable ic_nav_home
+drawable ic_nav_profile
+drawable ic_nav_progress
 drawable ic_search_black_24
 drawable icon_background
 drawable m3_avd_hide_password
@@ -3277,6 +3282,7 @@ id bestChoice
 id blocking
 id bottom
 id bottomBar
+id bottomNav
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3512,6 +3518,11 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_ask
+id nav_flashcards
+id nav_home
+id nav_profile
+id nav_progress
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3846,11 +3857,16 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_ask
+layout activity_flashcard
 layout activity_home
 layout activity_login
 layout activity_onboarding
+layout activity_profile
+layout activity_progress
 layout activity_register
 layout activity_splash
+layout bottom_nav
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -3934,6 +3950,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout splash_screen_view
 layout support_simple_spinner_dropdown_item
+menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -4143,6 +4160,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string pick_subjects
 string pick_subjects_subtitle
+string placeholder_coming_soon
 string project_id
 string search_menu_title
 string searchbar_scrolling_view_behavior

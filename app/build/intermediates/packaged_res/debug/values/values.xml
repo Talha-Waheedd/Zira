@@ -56,6 +56,7 @@
     <string name="password">Password</string>
     <string name="pick_subjects">Pick Your Subjects</string>
     <string name="pick_subjects_subtitle">Select the subjects you\'re studying this semester</string>
+    <string name="placeholder_coming_soon">Coming soon</string>
     <string name="project_id" translatable="false">zira-6f063</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_out">Sign Out</string>
