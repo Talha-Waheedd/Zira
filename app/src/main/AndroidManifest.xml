@@ -68,6 +68,16 @@
             android:exported="false"
             android:launchMode="singleTop" />
 
+        <activity
+            android:name=".ui.quiz.QuizActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.home.HomeActivity" />
+
+        <activity
+            android:name=".ui.quiz.ResultActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.quiz.QuizActivity" />
+
     </application>
 
 </manifest>

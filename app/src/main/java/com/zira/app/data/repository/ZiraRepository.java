@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -11,12 +12,15 @@ import com.zira.app.data.local.AppDatabase;
 import com.zira.app.data.local.entity.DeckSummary;
 import com.zira.app.data.local.entity.ExplanationEntity;
 import com.zira.app.data.local.entity.FlashcardEntity;
+import com.zira.app.data.model.UserProfile;
 import com.zira.app.data.remote.ApiService;
 import com.zira.app.data.remote.RetrofitClient;
 import com.zira.app.data.remote.model.ExplanationRequest;
 import com.zira.app.data.remote.model.ExplanationResponse;
 import com.zira.app.data.remote.model.FlashcardRequest;
 import com.zira.app.data.remote.model.FlashcardResponse;
+import com.zira.app.data.remote.model.QuizRequest;
+import com.zira.app.data.remote.model.QuizResponse;
 import com.zira.app.utils.Constants;
 import com.zira.app.utils.DateUtils;
 
@@ -210,5 +214,112 @@ public class ZiraRepository {
         }
 
         ioExecutor.execute(() -> database.flashcardDao().insertAll(entities));
+    }
+
+    // ---------------------------------------------------------------------------------------------
+    // Home / User profile
+    // ---------------------------------------------------------------------------------------------
+
+    /** Observes the Firestore user document and maps it to a {@link UserProfile}. */
+    public LiveData<UserProfile> observeUserProfile(String userId) {
+        if (userId == null) {
+            return new MutableLiveData<>();
+        }
+        return new UserProfileLiveData(firestore, userId);
+    }
+
+    // ---------------------------------------------------------------------------------------------
+    // Quiz
+    // ---------------------------------------------------------------------------------------------
+
+    public void getQuiz(String subject,
+                        String difficulty,
+                        int count,
+                        String userId,
+                        @NonNull Callback<QuizResponse> callback) {
+        QuizRequest request = new QuizRequest(subject, difficulty, count, userId);
+        apiService.getQuiz(request).enqueue(callback);
+    }
+
+    /**
+     * Persists a completed quiz session to Firestore and updates the user's study streak.
+     */
+    public void saveQuizSession(String userId,
+                                String subject,
+                                int score,
+                                int totalQuestions,
+                                List<String> wrongTopics,
+                                int timeTakenSecs) {
+        if (userId == null) {
+            return;
+        }
+
+        Map<String, Object> session = new HashMap<>();
+        session.put(Constants.FIELD_SUBJECT, subject);
+        session.put(Constants.FIELD_SCORE, score);
+        session.put(Constants.FIELD_TOTAL_QUESTIONS, totalQuestions);
+        session.put(Constants.FIELD_WRONG_TOPICS,
+                wrongTopics != null ? wrongTopics : new ArrayList<String>());
+        session.put(Constants.FIELD_TIME_TAKEN_SECS, timeTakenSecs);
+        session.put(Constants.FIELD_TIMESTAMP, FieldValue.serverTimestamp());
+
+        firestore.collection(Constants.COLLECTION_USERS)
+                .document(userId)
+                .collection(Constants.COLLECTION_QUIZ_SESSIONS)
+                .add(session);
+
+        Map<String, Object> studySession = new HashMap<>();
+        studySession.put(Constants.FIELD_SUBJECT, subject);
+        studySession.put("durationMins", Math.max(1, timeTakenSecs / 60));
+        studySession.put(Constants.FIELD_ACTIVITY_TYPE, Constants.ACTIVITY_QUIZ);
+        studySession.put(Constants.FIELD_TIMESTAMP, FieldValue.serverTimestamp());
+
+        firestore.collection(Constants.COLLECTION_USERS)
+                .document(userId)
+                .collection(Constants.COLLECTION_STUDY_SESSIONS)
+                .add(studySession);
+
+        updateStreakAfterStudy(userId);
+    }
+
+    private void updateStreakAfterStudy(String userId) {
+        firestore.collection(Constants.COLLECTION_USERS)
+                .document(userId)
+                .get()
+                .addOnSuccessListener(snapshot -> {
+                    if (!snapshot.exists()) {
+                        return;
+                    }
+
+                    int currentStreak = 0;
+                    Long streakVal = snapshot.getLong(Constants.FIELD_STREAK_COUNT);
+                    if (streakVal != null) {
+                        currentStreak = streakVal.intValue();
+                    }
+
+                    com.google.firebase.Timestamp lastStudy =
+                            snapshot.getTimestamp(Constants.FIELD_LAST_STUDY_DATE);
+                    long lastStudyMillis = lastStudy != null ? lastStudy.toDate().getTime() : 0;
+
+                    int newStreak;
+                    if (DateUtils.isSameDay(lastStudyMillis, System.currentTimeMillis())) {
+                        newStreak = Math.max(currentStreak, 1);
+                    } else if (DateUtils.isYesterday(lastStudyMillis)) {
+                        newStreak = currentStreak + 1;
+                    } else {
+                        newStreak = 1;
+                    }
+
+                    Map<String, Object> updates = new HashMap<>();
+                    updates.put(Constants.FIELD_STREAK_COUNT, newStreak);
+                    updates.put(Constants.FIELD_LAST_STUDY_DATE, FieldValue.serverTimestamp());
+                    updates.put(Constants.FIELD_TOTAL_XP,
+                            (snapshot.getLong(Constants.FIELD_TOTAL_XP) != null
+                                    ? snapshot.getLong(Constants.FIELD_TOTAL_XP) : 0) + 10);
+
+                    firestore.collection(Constants.COLLECTION_USERS)
+                            .document(userId)
+                            .update(updates);
+                });
     }
 }

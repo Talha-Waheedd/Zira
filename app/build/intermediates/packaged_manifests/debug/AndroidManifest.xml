@@ -75,6 +75,14 @@
             android:name="com.zira.app.ui.profile.ProfileActivity"
             android:exported="false"
             android:launchMode="singleTop" />
+        <activity
+            android:name="com.zira.app.ui.quiz.QuizActivity"
+            android:exported="false"
+            android:parentActivityName="com.zira.app.ui.home.HomeActivity" />
+        <activity
+            android:name="com.zira.app.ui.quiz.ResultActivity"
+            android:exported="false"
+            android:parentActivityName="com.zira.app.ui.quiz.QuizActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

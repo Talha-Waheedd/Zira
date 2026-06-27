@@ -26,4 +26,8 @@
     <color name="splash_gradient_end">#7D5260</color>
     <color name="user_bubble">#EADDFF</color>
     <color name="zira_bubble">#F3EDF7</color>
+    <color name="quiz_correct">#2E7D32</color>
+    <color name="quiz_correct_container">#C8E6C9</color>
+    <color name="quiz_wrong">#B3261E</color>
+    <color name="quiz_wrong_container">#F9DEDC</color>
 </resources>

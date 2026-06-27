@@ -62,4 +62,16 @@ public final class DateUtils {
         return new java.text.SimpleDateFormat("yyyy-MM-dd", Locale.US)
                 .format(new java.util.Date(millis));
     }
+
+    /** @return a time-of-day greeting prefix, e.g. "Good morning". */
+    @NonNull
+    public static String getTimeOfDayGreeting() {
+        int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+        if (hour < 12) {
+            return "Good morning";
+        } else if (hour < 17) {
+            return "Good afternoon";
+        }
+        return "Good evening";
+    }
 }

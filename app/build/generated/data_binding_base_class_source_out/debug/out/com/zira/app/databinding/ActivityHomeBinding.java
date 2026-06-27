@@ -4,11 +4,17 @@ package com.zira.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.zira.app.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -16,20 +22,65 @@ import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
   public final BottomNavBinding bottomNav;
 
-  private ActivityHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavBinding bottomNav) {
+  @NonNull
+  public final MaterialButton btnReviewNow;
+
+  @NonNull
+  public final MaterialButton btnStartQuiz;
+
+  @NonNull
+  public final MaterialCardView cardQuiz;
+
+  @NonNull
+  public final MaterialCardView cardReview;
+
+  @NonNull
+  public final Chip chipStreak;
+
+  @NonNull
+  public final ExtendedFloatingActionButton fabAsk;
+
+  @NonNull
+  public final RecyclerView recyclerRecent;
+
+  @NonNull
+  public final TextView tvGreeting;
+
+  @NonNull
+  public final TextView tvRecentEmpty;
+
+  @NonNull
+  public final TextView tvReviewDue;
+
+  private ActivityHomeBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull BottomNavBinding bottomNav, @NonNull MaterialButton btnReviewNow,
+      @NonNull MaterialButton btnStartQuiz, @NonNull MaterialCardView cardQuiz,
+      @NonNull MaterialCardView cardReview, @NonNull Chip chipStreak,
+      @NonNull ExtendedFloatingActionButton fabAsk, @NonNull RecyclerView recyclerRecent,
+      @NonNull TextView tvGreeting, @NonNull TextView tvRecentEmpty,
+      @NonNull TextView tvReviewDue) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
+    this.btnReviewNow = btnReviewNow;
+    this.btnStartQuiz = btnStartQuiz;
+    this.cardQuiz = cardQuiz;
+    this.cardReview = cardReview;
+    this.chipStreak = chipStreak;
+    this.fabAsk = fabAsk;
+    this.recyclerRecent = recyclerRecent;
+    this.tvGreeting = tvGreeting;
+    this.tvRecentEmpty = tvRecentEmpty;
+    this.tvReviewDue = tvReviewDue;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -61,7 +112,69 @@ public final class ActivityHomeBinding implements ViewBinding {
       }
       BottomNavBinding binding_bottomNav = BottomNavBinding.bind(bottomNav);
 
-      return new ActivityHomeBinding((ConstraintLayout) rootView, binding_bottomNav);
+      id = R.id.btnReviewNow;
+      MaterialButton btnReviewNow = ViewBindings.findChildViewById(rootView, id);
+      if (btnReviewNow == null) {
+        break missingId;
+      }
+
+      id = R.id.btnStartQuiz;
+      MaterialButton btnStartQuiz = ViewBindings.findChildViewById(rootView, id);
+      if (btnStartQuiz == null) {
+        break missingId;
+      }
+
+      id = R.id.cardQuiz;
+      MaterialCardView cardQuiz = ViewBindings.findChildViewById(rootView, id);
+      if (cardQuiz == null) {
+        break missingId;
+      }
+
+      id = R.id.cardReview;
+      MaterialCardView cardReview = ViewBindings.findChildViewById(rootView, id);
+      if (cardReview == null) {
+        break missingId;
+      }
+
+      id = R.id.chipStreak;
+      Chip chipStreak = ViewBindings.findChildViewById(rootView, id);
+      if (chipStreak == null) {
+        break missingId;
+      }
+
+      id = R.id.fabAsk;
+      ExtendedFloatingActionButton fabAsk = ViewBindings.findChildViewById(rootView, id);
+      if (fabAsk == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerRecent;
+      RecyclerView recyclerRecent = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerRecent == null) {
+        break missingId;
+      }
+
+      id = R.id.tvGreeting;
+      TextView tvGreeting = ViewBindings.findChildViewById(rootView, id);
+      if (tvGreeting == null) {
+        break missingId;
+      }
+
+      id = R.id.tvRecentEmpty;
+      TextView tvRecentEmpty = ViewBindings.findChildViewById(rootView, id);
+      if (tvRecentEmpty == null) {
+        break missingId;
+      }
+
+      id = R.id.tvReviewDue;
+      TextView tvReviewDue = ViewBindings.findChildViewById(rootView, id);
+      if (tvReviewDue == null) {
+        break missingId;
+      }
+
+      return new ActivityHomeBinding((CoordinatorLayout) rootView, binding_bottomNav, btnReviewNow,
+          btnStartQuiz, cardQuiz, cardReview, chipStreak, fabAsk, recyclerRecent, tvGreeting,
+          tvRecentEmpty, tvReviewDue);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -15,6 +15,10 @@
     <color name="outline">#79747E</color>
     <color name="primary">#6750A4</color>
     <color name="primary_container">#EADDFF</color>
+    <color name="quiz_correct">#2E7D32</color>
+    <color name="quiz_correct_container">#C8E6C9</color>
+    <color name="quiz_wrong">#B3261E</color>
+    <color name="quiz_wrong_container">#F9DEDC</color>
     <color name="secondary">#625B71</color>
     <color name="secondary_container">#E8DEF8</color>
     <color name="seed">#6750A4</color>
@@ -33,6 +37,9 @@
     <string name="ask_title">Ask Zira</string>
     <string name="ask_welcome">Hi! I\'m Zira, your AI study companion. Ask me anything about your subjects and I\'ll explain it step by step.</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_medium">Medium</string>
     <string name="display_name">Display Name</string>
     <string name="email">Email</string>
     <string name="error_auth_failed">Authentication failed. Please try again.</string>
@@ -64,6 +71,18 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC8bHgx2HwtmghpLFo9ZEZ-b0_RKnv98-k</string>
     <string name="google_storage_bucket" translatable="false">zira-6f063.firebasestorage.app</string>
     <string name="have_account">Already have an account? Sign In</string>
+    <string name="home_ask_fab">Ask Zira</string>
+    <string name="home_greeting_default">Good morning, Student</string>
+    <string name="home_quiz_start">Start Quiz</string>
+    <string name="home_quiz_subtitle">Test your knowledge with AI-generated MCQs</string>
+    <string name="home_quiz_title">Quiz Mode</string>
+    <string name="home_recent_empty">Ask Zira a question to see explanations here</string>
+    <string name="home_recent_title">Recent Explanations</string>
+    <string name="home_review_due">%d flashcards due</string>
+    <string name="home_review_none">All caught up!</string>
+    <string name="home_review_title">Today\'s Review</string>
+    <string name="home_streak">%d day streak</string>
+    <string name="home_streak_zero">Start your streak today!</string>
     <string name="minutes_per_day">%d minutes per day</string>
     <string name="nav_ask">Ask</string>
     <string name="nav_flashcards">Flashcards</string>
@@ -77,6 +96,26 @@
     <string name="pick_subjects_subtitle">Select the subjects you\'re studying this semester</string>
     <string name="placeholder_coming_soon">Coming soon</string>
     <string name="project_id" translatable="false">zira-6f063</string>
+    <string name="quiz_correct_feedback">Correct!</string>
+    <string name="quiz_difficulty_label">Difficulty</string>
+    <string name="quiz_finish">Finish</string>
+    <string name="quiz_loading">Generating questions…</string>
+    <string name="quiz_next">Next</string>
+    <string name="quiz_question_progress">Question %1$d of %2$d</string>
+    <string name="quiz_setup_subtitle">Pick a subject and difficulty to begin</string>
+    <string name="quiz_start">Start Quiz</string>
+    <string name="quiz_subject_label">Subject</string>
+    <string name="quiz_timer">%1$02d:%2$02d</string>
+    <string name="quiz_title">Quiz Mode</string>
+    <string name="quiz_wrong_feedback">Correct answer: %s</string>
+    <string name="result_back_home">Back to Home</string>
+    <string name="result_none_wrong">Perfect score — no weak topics!</string>
+    <string name="result_percentage">%d%%</string>
+    <string name="result_retry">Try Again</string>
+    <string name="result_score">%1$d / %2$d</string>
+    <string name="result_time">Time: %1$02d:%2$02d</string>
+    <string name="result_title">Quiz Results</string>
+    <string name="result_wrong_topics">Topics to review</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_out">Sign Out</string>
     <string name="sign_up">Register</string>
@@ -87,6 +126,7 @@
     <string name="subject_chemistry">Chemistry</string>
     <string name="subject_cs">Computer Science</string>
     <string name="subject_economics">Economics</string>
+    <string name="subject_general">General</string>
     <string name="subject_maths">Mathematics</string>
     <string name="subject_physics">Physics</string>
     <string name="welcome_subtitle">Your AI-powered study companion for Pakistani university students</string>

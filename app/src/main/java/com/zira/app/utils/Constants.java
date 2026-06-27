@@ -68,4 +68,23 @@ public final class Constants {
     public static final int DEFAULT_DAILY_GOAL_MINS = 30;
     public static final int MIN_DAILY_GOAL_MINS = 15;
     public static final int MAX_DAILY_GOAL_MINS = 120;
+
+    // Quiz
+    public static final int QUIZ_DEFAULT_COUNT = 5;
+
+    public static final String EXTRA_QUIZ_SUBJECT = "extra_quiz_subject";
+    public static final String EXTRA_QUIZ_SCORE = "extra_quiz_score";
+    public static final String EXTRA_QUIZ_TOTAL = "extra_quiz_total";
+    public static final String EXTRA_QUIZ_WRONG_TOPICS = "extra_quiz_wrong_topics";
+    public static final String EXTRA_QUIZ_TIME_SECS = "extra_quiz_time_secs";
+
+    public static final String FIELD_SCORE = "score";
+    public static final String FIELD_TOTAL_QUESTIONS = "totalQuestions";
+    public static final String FIELD_WRONG_TOPICS = "wrongTopics";
+    public static final String FIELD_TIME_TAKEN_SECS = "timeTakenSecs";
+    public static final String FIELD_ACTIVITY_TYPE = "activityType";
+
+    public static final String ACTIVITY_QUIZ = "quiz";
+    public static final String ACTIVITY_ASK = "ask";
+    public static final String ACTIVITY_FLASHCARD = "flashcard";
 }

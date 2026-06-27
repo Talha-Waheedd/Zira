@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-73:12
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] C:\Users\talha\.gradle\caches\transforms-3\08f855bc17ab11e7dfd66d8c7ce8f212\transformed\jetified-viewbinding-8.2.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\talha\.gradle\caches\transforms-3\c6ae65a20c9514d168cda264a8797175\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -101,8 +101,8 @@ MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\talha\.gradle\caches\transfor
 	android:name
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-71:19
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-71:19
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-81:19
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-81:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\talha\.gradle\caches\transforms-3\c6ae65a20c9514d168cda264a8797175\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -251,6 +251,22 @@ ADDED from D:\Zira\app\src\main\AndroidManifest.xml:66:9-69:46
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:68:13-37
 	android:name
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:67:13-55
+activity#com.zira.app.ui.quiz.QuizActivity
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:71:9-74:66
+	android:parentActivityName
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:74:13-63
+	android:exported
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:73:13-37
+	android:name
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:72:13-49
+activity#com.zira.app.ui.quiz.ResultActivity
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:76:9-79:66
+	android:parentActivityName
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:79:13-63
+	android:exported
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:78:13-37
+	android:name
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:77:13-51
 uses-sdk
 INJECTED from D:\Zira\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Zira\app\src\main\AndroidManifest.xml

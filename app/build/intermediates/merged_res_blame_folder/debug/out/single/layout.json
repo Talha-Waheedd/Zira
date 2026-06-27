@@ -1,15 +1,55 @@
 [
     {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\bottom_sheet_rating.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\bottom_sheet_rating.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\item_flashcard_page.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_flashcard_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\item_deck.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_deck.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-42:/layout/item_recent_explanation.xml",
+        "source": "com.zira.app-main-45:/layout/item_recent_explanation.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\item_message_user.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_message_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_onboarding.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_onboarding.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-42:/layout/activity_home.xml",
+        "source": "com.zira.app-main-45:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.zira.app-mergeDebugResources-42:/layout/activity_result.xml",
+        "source": "com.zira.app-main-45:/layout/activity_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\fragment_subject_picker.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\fragment_subject_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_ask.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_ask.xml"
+    },
+    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\fragment_study_goal.xml",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\fragment_study_goal.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\item_message_zira.xml",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_message_zira.xml"
-    },
-    {
-        "merged": "com.zira.app-mergeDebugResources-42:/layout/item_flashcard_page.xml",
-        "source": "com.zira.app-main-45:/layout/item_flashcard_page.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\fragment_welcome.xml",
@@ -20,16 +60,12 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_follow_up_chip.xml"
     },
     {
-        "merged": "com.zira.app-mergeDebugResources-42:/layout/activity_flashcard.xml",
-        "source": "com.zira.app-main-45:/layout/activity_flashcard.xml"
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_flashcard_review.xml",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_flashcard_review.xml"
     },
     {
-        "merged": "com.zira.app-mergeDebugResources-42:/layout/activity_flashcard_review.xml",
-        "source": "com.zira.app-main-45:/layout/activity_flashcard_review.xml"
-    },
-    {
-        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\item_message_user.xml",
-        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_message_user.xml"
+        "merged": "com.zira.app-mergeDebugResources-42:/layout/activity_quiz.xml",
+        "source": "com.zira.app-main-45:/layout/activity_quiz.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_splash.xml",
@@ -48,32 +84,8 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "com.zira.app-mergeDebugResources-42:/layout/item_deck.xml",
-        "source": "com.zira.app-main-45:/layout/item_deck.xml"
-    },
-    {
-        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_register.xml",
-        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_onboarding.xml",
-        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_onboarding.xml"
-    },
-    {
-        "merged": "com.zira.app-mergeDebugResources-42:/layout/bottom_sheet_rating.xml",
-        "source": "com.zira.app-main-45:/layout/bottom_sheet_rating.xml"
-    },
-    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_progress.xml",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_progress.xml"
-    },
-    {
-        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\activity_ask.xml",
-        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_ask.xml"
-    },
-    {
-        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\fragment_subject_picker.xml",
-        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\fragment_subject_picker.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-mergeDebugResources-42:\\layout\\bottom_nav.xml",
