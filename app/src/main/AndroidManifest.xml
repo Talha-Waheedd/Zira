@@ -78,6 +78,11 @@
             android:exported="false"
             android:parentActivityName=".ui.quiz.QuizActivity" />
 
+        <activity
+            android:name=".ui.schedule.ScheduleActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.profile.ProfileActivity" />
+
     </application>
 
 </manifest>

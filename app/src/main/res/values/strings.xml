@@ -42,6 +42,7 @@
     <string name="error_no_subjects">Please select at least one subject</string>
     <string name="error_auth_failed">Authentication failed. Please try again.</string>
     <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_offline">You\'re offline. Connect to the internet to use Zira\'s AI features.</string>
 
     <!-- Bottom navigation -->
     <string name="nav_home">Home</string>
@@ -119,4 +120,41 @@
     <string name="result_none_wrong">Perfect score — no weak topics!</string>
     <string name="result_back_home">Back to Home</string>
     <string name="result_retry">Try Again</string>
+
+    <!-- Progress -->
+    <string name="progress_title">Your Progress</string>
+    <string name="progress_weekly_title">Weekly Study Time</string>
+    <string name="progress_weekly_minutes">Minutes</string>
+    <string name="progress_mastery_title">Subject Mastery</string>
+    <string name="progress_streak_title">Study Calendar</string>
+    <string name="progress_streak_subtitle">Last 28 days</string>
+    <string name="progress_weak_title">Weak Topics</string>
+    <string name="progress_weak_empty">No weak topics yet — keep quizzing!</string>
+    <string name="progress_xp">%d XP</string>
+    <string name="progress_loading">Loading analytics…</string>
+    <string name="progress_no_data">No study data yet. Start learning!</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_subjects">My Subjects</string>
+    <string name="profile_daily_goal">Daily Study Goal</string>
+    <string name="profile_dark_mode">Dark Mode</string>
+    <string name="profile_notifications">Study Reminders</string>
+    <string name="profile_schedule">Study Schedule</string>
+    <string name="profile_schedule_subtitle">Plan revision around your exams</string>
+    <string name="profile_saved">Profile updated</string>
+
+    <!-- Schedule -->
+    <string name="schedule_title">Study Schedule</string>
+    <string name="schedule_subtitle">Add your upcoming exams and Zira will build a plan</string>
+    <string name="schedule_add_exam">Add Exam</string>
+    <string name="schedule_generate">Generate Schedule</string>
+    <string name="schedule_exam_subject">Exam subject</string>
+    <string name="schedule_exam_date">Exam date</string>
+    <string name="schedule_pick_date">Pick date</string>
+    <string name="schedule_results_title">Your Plan</string>
+    <string name="schedule_empty">Add at least one exam to generate a schedule</string>
+    <string name="schedule_item_format">%1$s · %2$s · %3$d min</string>
+    <string name="schedule_generating">Building your schedule…</string>
+    <string name="schedule_error">Could not generate schedule. Try again.</string>
 </resources>

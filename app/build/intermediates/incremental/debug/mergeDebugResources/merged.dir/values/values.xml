@@ -2077,6 +2077,7 @@
     <string name="error_icon_content_description">Error</string>
     <string name="error_network">Network error. Please check your connection.</string>
     <string name="error_no_subjects">Please select at least one subject</string>
+    <string name="error_offline">You\'re offline. Connect to the internet to use Zira\'s AI features.</string>
     <string name="error_password_mismatch">Passwords do not match</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
@@ -2244,6 +2245,25 @@
     <string name="pick_subjects">Pick Your Subjects</string>
     <string name="pick_subjects_subtitle">Select the subjects you\'re studying this semester</string>
     <string name="placeholder_coming_soon">Coming soon</string>
+    <string name="profile_daily_goal">Daily Study Goal</string>
+    <string name="profile_dark_mode">Dark Mode</string>
+    <string name="profile_notifications">Study Reminders</string>
+    <string name="profile_saved">Profile updated</string>
+    <string name="profile_schedule">Study Schedule</string>
+    <string name="profile_schedule_subtitle">Plan revision around your exams</string>
+    <string name="profile_subjects">My Subjects</string>
+    <string name="profile_title">Profile</string>
+    <string name="progress_loading">Loading analytics…</string>
+    <string name="progress_mastery_title">Subject Mastery</string>
+    <string name="progress_no_data">No study data yet. Start learning!</string>
+    <string name="progress_streak_subtitle">Last 28 days</string>
+    <string name="progress_streak_title">Study Calendar</string>
+    <string name="progress_title">Your Progress</string>
+    <string name="progress_weak_empty">No weak topics yet — keep quizzing!</string>
+    <string name="progress_weak_title">Weak Topics</string>
+    <string name="progress_weekly_minutes">Minutes</string>
+    <string name="progress_weekly_title">Weekly Study Time</string>
+    <string name="progress_xp">%d XP</string>
     <string name="project_id" translatable="false">zira-6f063</string>
     <string name="quiz_correct_feedback">Correct!</string>
     <string name="quiz_difficulty_label">Difficulty</string>
@@ -2265,6 +2285,18 @@
     <string name="result_time">Time: %1$02d:%2$02d</string>
     <string name="result_title">Quiz Results</string>
     <string name="result_wrong_topics">Topics to review</string>
+    <string name="schedule_add_exam">Add Exam</string>
+    <string name="schedule_empty">Add at least one exam to generate a schedule</string>
+    <string name="schedule_error">Could not generate schedule. Try again.</string>
+    <string name="schedule_exam_date">Exam date</string>
+    <string name="schedule_exam_subject">Exam subject</string>
+    <string name="schedule_generate">Generate Schedule</string>
+    <string name="schedule_generating">Building your schedule…</string>
+    <string name="schedule_item_format">%1$s · %2$s · %3$d min</string>
+    <string name="schedule_pick_date">Pick date</string>
+    <string name="schedule_results_title">Your Plan</string>
+    <string name="schedule_subtitle">Add your upcoming exams and Zira will build a plan</string>
+    <string name="schedule_title">Study Schedule</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior

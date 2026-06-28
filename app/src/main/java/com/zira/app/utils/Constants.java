@@ -13,6 +13,8 @@ public final class Constants {
 
     public static final String PREFS_NAME = "zira_prefs";
     public static final String KEY_ONBOARDING_COMPLETE = "onboarding_complete";
+    public static final String KEY_DARK_MODE = "dark_mode";
+    public static final String KEY_NOTIFICATIONS_ENABLED = "notifications_enabled";
 
     // Difficulty levels accepted by the backend
     public static final String DIFFICULTY_EASY = "easy";
@@ -87,4 +89,9 @@ public final class Constants {
     public static final String ACTIVITY_QUIZ = "quiz";
     public static final String ACTIVITY_ASK = "ask";
     public static final String ACTIVITY_FLASHCARD = "flashcard";
+
+    public static final String FIELD_DURATION_MINS = "durationMins";
+
+    public static final int STREAK_CALENDAR_DAYS = 28;
+    public static final int WEAK_TOPICS_LIMIT = 8;
 }

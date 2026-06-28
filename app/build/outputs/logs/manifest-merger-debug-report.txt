@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-83:12
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-88:12
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:2:1-88:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] C:\Users\talha\.gradle\caches\transforms-3\08f855bc17ab11e7dfd66d8c7ce8f212\transformed\jetified-viewbinding-8.2.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\talha\.gradle\caches\transforms-3\c6ae65a20c9514d168cda264a8797175\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
@@ -53,6 +53,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\talha\.gradle
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\talha\.gradle\caches\transforms-3\b545a5bcdef6d8c8b6ad1aca75694957\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\talha\.gradle\caches\transforms-3\76ea385c84c79903921e899cf3ea1d61\transformed\jetified-core-splashscreen-1.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:17:1-31:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\talha\.gradle\caches\transforms-3\ae3b9db56bafe73c381c84fda6cd29e8\transformed\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\c5322ad0418e12e2fdd78ab3d1372e5b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\8f62d14a893f13d128292228d19e7c29\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\talha\.gradle\caches\transforms-3\85f7ad07438085a16cada9f53239b361\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
@@ -101,8 +102,8 @@ MERGED from [io.grpc:grpc-android:1.52.1] C:\Users\talha\.gradle\caches\transfor
 	android:name
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-81:19
-INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-81:19
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-86:19
+INJECTED from D:\Zira\app\src\main\AndroidManifest.xml:7:5-86:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\talha\.gradle\caches\transforms-3\ab6a5a68ef8a31367459ed90d33bf86d\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\talha\.gradle\caches\transforms-3\c6ae65a20c9514d168cda264a8797175\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -267,6 +268,14 @@ ADDED from D:\Zira\app\src\main\AndroidManifest.xml:76:9-79:66
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:78:13-37
 	android:name
 		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:77:13-51
+activity#com.zira.app.ui.schedule.ScheduleActivity
+ADDED from D:\Zira\app\src\main\AndroidManifest.xml:81:9-84:72
+	android:parentActivityName
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:84:13-69
+	android:exported
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:83:13-37
+	android:name
+		ADDED from D:\Zira\app\src\main\AndroidManifest.xml:82:13-57
 uses-sdk
 INJECTED from D:\Zira\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Zira\app\src\main\AndroidManifest.xml
@@ -369,6 +378,8 @@ MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\talha\.gradle\cache
 MERGED from [androidx.core:core-splashscreen:1.0.1] C:\Users\talha\.gradle\caches\transforms-3\76ea385c84c79903921e899cf3ea1d61\transformed\jetified-core-splashscreen-1.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
 MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\talha\.gradle\caches\transforms-3\e94593743cb97658268002ae6f003bd2\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\talha\.gradle\caches\transforms-3\ae3b9db56bafe73c381c84fda6cd29e8\transformed\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\talha\.gradle\caches\transforms-3\ae3b9db56bafe73c381c84fda6cd29e8\transformed\jetified-MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\c5322ad0418e12e2fdd78ab3d1372e5b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\c5322ad0418e12e2fdd78ab3d1372e5b\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\talha\.gradle\caches\transforms-3\8f62d14a893f13d128292228d19e7c29\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44

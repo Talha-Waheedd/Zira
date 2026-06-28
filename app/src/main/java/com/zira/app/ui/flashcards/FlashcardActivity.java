@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.zira.app.R;
 import com.zira.app.ui.BaseNavActivity;
 import com.zira.app.utils.Constants;
+import com.zira.app.utils.NetworkUtils;
 
 public class FlashcardActivity extends BaseNavActivity implements DeckAdapter.DeckActionListener {
 
@@ -107,6 +108,10 @@ public class FlashcardActivity extends BaseNavActivity implements DeckAdapter.De
     public void onGenerateDeck(String subject) {
         if (userId == null) {
             Snackbar.make(recyclerDecks, R.string.error_auth_failed, Snackbar.LENGTH_SHORT).show();
+            return;
+        }
+        if (!NetworkUtils.isConnected(this)) {
+            Snackbar.make(recyclerDecks, R.string.error_offline, Snackbar.LENGTH_LONG).show();
             return;
         }
         viewModel.generateDeck(subject, userId);

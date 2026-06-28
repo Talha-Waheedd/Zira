@@ -4,11 +4,18 @@ package com.zira.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.android.material.slider.Slider;
 import com.zira.app.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -16,20 +23,73 @@ import java.lang.String;
 
 public final class ActivityProfileBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
   public final BottomNavBinding bottomNav;
 
-  private ActivityProfileBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavBinding bottomNav) {
+  @NonNull
+  public final MaterialButton btnOpenSchedule;
+
+  @NonNull
+  public final MaterialButton btnSignOut;
+
+  @NonNull
+  public final MaterialCardView cardSchedule;
+
+  @NonNull
+  public final ChipGroup chipGroupSubjects;
+
+  @NonNull
+  public final Slider sliderDailyGoal;
+
+  @NonNull
+  public final MaterialSwitch switchDarkMode;
+
+  @NonNull
+  public final MaterialSwitch switchNotifications;
+
+  @NonNull
+  public final MaterialToolbar toolbar;
+
+  @NonNull
+  public final TextView tvDailyGoalValue;
+
+  @NonNull
+  public final TextView tvDisplayName;
+
+  @NonNull
+  public final TextView tvEmail;
+
+  @NonNull
+  public final TextView tvInitials;
+
+  private ActivityProfileBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull BottomNavBinding bottomNav, @NonNull MaterialButton btnOpenSchedule,
+      @NonNull MaterialButton btnSignOut, @NonNull MaterialCardView cardSchedule,
+      @NonNull ChipGroup chipGroupSubjects, @NonNull Slider sliderDailyGoal,
+      @NonNull MaterialSwitch switchDarkMode, @NonNull MaterialSwitch switchNotifications,
+      @NonNull MaterialToolbar toolbar, @NonNull TextView tvDailyGoalValue,
+      @NonNull TextView tvDisplayName, @NonNull TextView tvEmail, @NonNull TextView tvInitials) {
     this.rootView = rootView;
     this.bottomNav = bottomNav;
+    this.btnOpenSchedule = btnOpenSchedule;
+    this.btnSignOut = btnSignOut;
+    this.cardSchedule = cardSchedule;
+    this.chipGroupSubjects = chipGroupSubjects;
+    this.sliderDailyGoal = sliderDailyGoal;
+    this.switchDarkMode = switchDarkMode;
+    this.switchNotifications = switchNotifications;
+    this.toolbar = toolbar;
+    this.tvDailyGoalValue = tvDailyGoalValue;
+    this.tvDisplayName = tvDisplayName;
+    this.tvEmail = tvEmail;
+    this.tvInitials = tvInitials;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -61,7 +121,82 @@ public final class ActivityProfileBinding implements ViewBinding {
       }
       BottomNavBinding binding_bottomNav = BottomNavBinding.bind(bottomNav);
 
-      return new ActivityProfileBinding((ConstraintLayout) rootView, binding_bottomNav);
+      id = R.id.btnOpenSchedule;
+      MaterialButton btnOpenSchedule = ViewBindings.findChildViewById(rootView, id);
+      if (btnOpenSchedule == null) {
+        break missingId;
+      }
+
+      id = R.id.btnSignOut;
+      MaterialButton btnSignOut = ViewBindings.findChildViewById(rootView, id);
+      if (btnSignOut == null) {
+        break missingId;
+      }
+
+      id = R.id.cardSchedule;
+      MaterialCardView cardSchedule = ViewBindings.findChildViewById(rootView, id);
+      if (cardSchedule == null) {
+        break missingId;
+      }
+
+      id = R.id.chipGroupSubjects;
+      ChipGroup chipGroupSubjects = ViewBindings.findChildViewById(rootView, id);
+      if (chipGroupSubjects == null) {
+        break missingId;
+      }
+
+      id = R.id.sliderDailyGoal;
+      Slider sliderDailyGoal = ViewBindings.findChildViewById(rootView, id);
+      if (sliderDailyGoal == null) {
+        break missingId;
+      }
+
+      id = R.id.switchDarkMode;
+      MaterialSwitch switchDarkMode = ViewBindings.findChildViewById(rootView, id);
+      if (switchDarkMode == null) {
+        break missingId;
+      }
+
+      id = R.id.switchNotifications;
+      MaterialSwitch switchNotifications = ViewBindings.findChildViewById(rootView, id);
+      if (switchNotifications == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      id = R.id.tvDailyGoalValue;
+      TextView tvDailyGoalValue = ViewBindings.findChildViewById(rootView, id);
+      if (tvDailyGoalValue == null) {
+        break missingId;
+      }
+
+      id = R.id.tvDisplayName;
+      TextView tvDisplayName = ViewBindings.findChildViewById(rootView, id);
+      if (tvDisplayName == null) {
+        break missingId;
+      }
+
+      id = R.id.tvEmail;
+      TextView tvEmail = ViewBindings.findChildViewById(rootView, id);
+      if (tvEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.tvInitials;
+      TextView tvInitials = ViewBindings.findChildViewById(rootView, id);
+      if (tvInitials == null) {
+        break missingId;
+      }
+
+      return new ActivityProfileBinding((CoordinatorLayout) rootView, binding_bottomNav,
+          btnOpenSchedule, btnSignOut, cardSchedule, chipGroupSubjects, sliderDailyGoal,
+          switchDarkMode, switchNotifications, toolbar, tvDailyGoalValue, tvDisplayName, tvEmail,
+          tvInitials);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

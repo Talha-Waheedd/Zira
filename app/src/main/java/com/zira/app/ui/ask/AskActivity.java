@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.zira.app.R;
 import com.zira.app.ui.BaseNavActivity;
 import com.zira.app.utils.Constants;
+import com.zira.app.utils.NetworkUtils;
 
 public class AskActivity extends BaseNavActivity
         implements MessageAdapter.OnFollowUpClickListener {
@@ -112,6 +113,11 @@ public class AskActivity extends BaseNavActivity
     private void sendQuestion(String question) {
         messageAdapter.addUserMessage(question);
         scrollToBottom();
+
+        if (!NetworkUtils.isConnected(this)) {
+            Snackbar.make(recyclerMessages, R.string.error_offline, Snackbar.LENGTH_LONG).show();
+            return;
+        }
         askViewModel.sendQuestion(question, Constants.SUBJECT_GENERAL, userId);
     }
 

@@ -1,23 +1,27 @@
 [
     {
-        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\mipmap-hdpi_ic_launcher.xml.flat",
-        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\mipmap-hdpi\\ic_launcher.xml"
+        "merged": "com.zira.app-merged_res-43:/anim_slide_out_right.xml.flat",
+        "source": "com.zira.app-main-45:/anim/slide_out_right.xml"
     },
     {
-        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\mipmap-hdpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\mipmap-hdpi\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\raw_typing_indicator.json.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\raw\\typing_indicator.json"
     },
     {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\raw_splash_animation.json.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\raw\\splash_animation.json"
     },
     {
-        "merged": "com.zira.app-merged_res-43:/drawable_ic_streak.xml.flat",
-        "source": "com.zira.app-main-45:/drawable/ic_streak.xml"
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\raw_fire_streak.json.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\raw\\fire_streak.json"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_tab_indicator_dot.xml.flat",
@@ -26,6 +30,10 @@
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_register.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_exam_input.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_exam_input.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_ic_send.xml.flat",
@@ -44,6 +52,10 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\tab_dot_unselected.xml"
     },
     {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_result.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_result.xml"
+    },
+    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_login.xml"
     },
@@ -60,12 +72,20 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_calendar_day_inactive.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\calendar_day_inactive.xml"
+    },
+    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_bg_bubble_zira.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\bg_bubble_zira.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_message_user.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_message_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\raw_success_checkmark.json.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\raw\\success_checkmark.json"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_message_zira.xml.flat",
@@ -76,8 +96,8 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_ask.xml"
     },
     {
-        "merged": "com.zira.app-merged_res-43:/layout_activity_result.xml.flat",
-        "source": "com.zira.app-main-45:/layout/activity_result.xml"
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_calendar_day_active.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\calendar_day_active.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_bottom_sheet_rating.xml.flat",
@@ -86,10 +106,6 @@
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_home.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_home.xml"
-    },
-    {
-        "merged": "com.zira.app-merged_res-43:/layout_activity_home.xml.flat",
-        "source": "com.zira.app-main-45:/layout/activity_home.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_ic_nav_home.xml.flat",
@@ -124,8 +140,16 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_flashcard.xml"
     },
     {
+        "merged": "com.zira.app-merged_res-43:/anim_slide_in_left.xml.flat",
+        "source": "com.zira.app-main-45:/anim/slide_in_left.xml"
+    },
+    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_progress.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_progress.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_schedule_task.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_schedule_task.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_bottom_nav.xml.flat",
@@ -134,6 +158,14 @@
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_avatar_circle.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\avatar_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_recent_explanation.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_recent_explanation.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_weak_topic.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_weak_topic.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_splash_background.xml.flat",
@@ -152,12 +184,24 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\fragment_welcome.xml"
     },
     {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_schedule.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_schedule.xml"
+    },
+    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_ic_nav_progress.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\ic_nav_progress.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_flashcard_page.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_flashcard_page.xml"
+    },
+    {
+        "merged": "com.zira.app-merged_res-43:/anim_slide_out_left.xml.flat",
+        "source": "com.zira.app-main-45:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "com.zira.app-merged_res-43:/anim_slide_in_right.xml.flat",
+        "source": "com.zira.app-main-45:/anim/slide_in_right.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_splash.xml.flat",
@@ -168,16 +212,24 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\fragment_subject_picker.xml"
     },
     {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_item_calendar_day.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\item_calendar_day.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_ic_streak.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\ic_streak.xml"
+    },
+    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_tab_dot_selected.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\tab_dot_selected.xml"
     },
     {
-        "merged": "com.zira.app-merged_res-43:/raw_success_checkmark.json.flat",
-        "source": "com.zira.app-main-45:/raw/success_checkmark.json"
-    },
-    {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_ic_back.xml.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\ic_close.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\mipmap-hdpi_ic_launcher_round.xml.flat",
@@ -188,20 +240,16 @@
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.zira.app-merged_res-43:/raw_fire_streak.json.flat",
-        "source": "com.zira.app-main-45:/raw/fire_streak.json"
+        "merged": "com.zira.app-merged_res-43:/anim_fade_in.xml.flat",
+        "source": "com.zira.app-main-45:/anim/fade_in.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\raw_empty_books.json.flat",
         "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\raw\\empty_books.json"
     },
     {
-        "merged": "com.zira.app-merged_res-43:/layout_activity_quiz.xml.flat",
-        "source": "com.zira.app-main-45:/layout/activity_quiz.xml"
-    },
-    {
-        "merged": "com.zira.app-merged_res-43:/layout_item_recent_explanation.xml.flat",
-        "source": "com.zira.app-main-45:/layout/item_recent_explanation.xml"
+        "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_activity_quiz.xml.flat",
+        "source": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-main-45:\\layout\\activity_quiz.xml"
     },
     {
         "merged": "C:\\Users\\talha\\.gradle\\daemon\\8.2\\com.zira.app-merged_res-43:\\layout_fragment_study_goal.xml.flat",

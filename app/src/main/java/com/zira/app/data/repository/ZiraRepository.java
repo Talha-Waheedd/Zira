@@ -6,12 +6,14 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.zira.app.data.local.AppDatabase;
 import com.zira.app.data.local.entity.DeckSummary;
 import com.zira.app.data.local.entity.ExplanationEntity;
 import com.zira.app.data.local.entity.FlashcardEntity;
+import com.zira.app.data.model.ProgressData;
 import com.zira.app.data.model.UserProfile;
 import com.zira.app.data.remote.ApiService;
 import com.zira.app.data.remote.RetrofitClient;
@@ -21,6 +23,8 @@ import com.zira.app.data.remote.model.FlashcardRequest;
 import com.zira.app.data.remote.model.FlashcardResponse;
 import com.zira.app.data.remote.model.QuizRequest;
 import com.zira.app.data.remote.model.QuizResponse;
+import com.zira.app.data.remote.model.ScheduleRequest;
+import com.zira.app.data.remote.model.ScheduleResponse;
 import com.zira.app.utils.Constants;
 import com.zira.app.utils.DateUtils;
 
@@ -270,7 +274,7 @@ public class ZiraRepository {
 
         Map<String, Object> studySession = new HashMap<>();
         studySession.put(Constants.FIELD_SUBJECT, subject);
-        studySession.put("durationMins", Math.max(1, timeTakenSecs / 60));
+        studySession.put(Constants.FIELD_DURATION_MINS, Math.max(1, timeTakenSecs / 60));
         studySession.put(Constants.FIELD_ACTIVITY_TYPE, Constants.ACTIVITY_QUIZ);
         studySession.put(Constants.FIELD_TIMESTAMP, FieldValue.serverTimestamp());
 
@@ -321,5 +325,110 @@ public class ZiraRepository {
                             .document(userId)
                             .update(updates);
                 });
+    }
+
+    // ---------------------------------------------------------------------------------------------
+    // Progress
+    // ---------------------------------------------------------------------------------------------
+
+    public interface ProgressLoadCallback {
+        void onSuccess(ProgressData data);
+
+        void onError();
+    }
+
+    /** Loads and aggregates study/quiz sessions from Firestore for the Progress screen. */
+    public void loadProgressData(String userId, ProgressLoadCallback callback) {
+        if (userId == null) {
+            callback.onError();
+            return;
+        }
+
+        firestore.collection(Constants.COLLECTION_USERS)
+                .document(userId)
+                .get()
+                .addOnCompleteListener(userTask -> {
+                    int streak = 0;
+                    int xp = 0;
+                    if (userTask.isSuccessful() && userTask.getResult() != null
+                            && userTask.getResult().exists()) {
+                        DocumentSnapshot user = userTask.getResult();
+                        Long streakVal = user.getLong(Constants.FIELD_STREAK_COUNT);
+                        Long xpVal = user.getLong(Constants.FIELD_TOTAL_XP);
+                        streak = streakVal != null ? streakVal.intValue() : 0;
+                        xp = xpVal != null ? xpVal.intValue() : 0;
+                    }
+
+                    final int finalStreak = streak;
+                    final int finalXp = xp;
+
+                    firestore.collection(Constants.COLLECTION_USERS)
+                            .document(userId)
+                            .collection(Constants.COLLECTION_STUDY_SESSIONS)
+                            .limit(200)
+                            .get()
+                            .addOnCompleteListener(studyTask -> {
+                                List<DocumentSnapshot> studyDocs = studyTask.isSuccessful()
+                                        && studyTask.getResult() != null
+                                        ? studyTask.getResult().getDocuments() : new ArrayList<>();
+
+                                firestore.collection(Constants.COLLECTION_USERS)
+                                        .document(userId)
+                                        .collection(Constants.COLLECTION_QUIZ_SESSIONS)
+                                        .limit(100)
+                                        .get()
+                                        .addOnCompleteListener(quizTask -> {
+                                            if (!quizTask.isSuccessful()) {
+                                                callback.onError();
+                                                return;
+                                            }
+                                            List<DocumentSnapshot> quizDocs =
+                                                    quizTask.getResult() != null
+                                                            ? quizTask.getResult().getDocuments()
+                                                            : new ArrayList<>();
+                                            ProgressData data = ProgressAggregator.aggregate(
+                                                    studyDocs, quizDocs, finalStreak, finalXp);
+                                            callback.onSuccess(data);
+                                        });
+                            });
+                });
+    }
+
+    // ---------------------------------------------------------------------------------------------
+    // Profile updates
+    // ---------------------------------------------------------------------------------------------
+
+    public void updateUserSubjects(String userId, List<String> subjects) {
+        if (userId == null) {
+            return;
+        }
+        Map<String, Object> updates = new HashMap<>();
+        updates.put(Constants.FIELD_SUBJECTS, subjects);
+        firestore.collection(Constants.COLLECTION_USERS)
+                .document(userId)
+                .update(updates);
+    }
+
+    public void updateDailyGoal(String userId, int dailyGoalMins) {
+        if (userId == null) {
+            return;
+        }
+        Map<String, Object> updates = new HashMap<>();
+        updates.put(Constants.FIELD_DAILY_GOAL_MINS, dailyGoalMins);
+        firestore.collection(Constants.COLLECTION_USERS)
+                .document(userId)
+                .update(updates);
+    }
+
+    // ---------------------------------------------------------------------------------------------
+    // Study schedule
+    // ---------------------------------------------------------------------------------------------
+
+    public void getSchedule(List<ScheduleRequest.Exam> exams,
+                            int dailyMins,
+                            String userId,
+                            @NonNull Callback<ScheduleResponse> callback) {
+        ScheduleRequest request = new ScheduleRequest(exams, dailyMins, userId);
+        apiService.getSchedule(request).enqueue(callback);
     }
 }

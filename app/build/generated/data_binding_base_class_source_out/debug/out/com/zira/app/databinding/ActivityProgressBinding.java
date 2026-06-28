@@ -4,11 +4,18 @@ package com.zira.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.zira.app.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -16,20 +23,60 @@ import java.lang.String;
 
 public final class ActivityProgressBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final CoordinatorLayout rootView;
+
+  @NonNull
+  public final BarChart barChartWeekly;
 
   @NonNull
   public final BottomNavBinding bottomNav;
 
-  private ActivityProgressBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavBinding bottomNav) {
+  @NonNull
+  public final Chip chipStreak;
+
+  @NonNull
+  public final Chip chipXp;
+
+  @NonNull
+  public final PieChart pieChartMastery;
+
+  @NonNull
+  public final LinearProgressIndicator progressLoading;
+
+  @NonNull
+  public final RecyclerView recyclerStreakCalendar;
+
+  @NonNull
+  public final RecyclerView recyclerWeakTopics;
+
+  @NonNull
+  public final MaterialToolbar toolbar;
+
+  @NonNull
+  public final TextView tvWeakEmpty;
+
+  private ActivityProgressBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull BarChart barChartWeekly, @NonNull BottomNavBinding bottomNav,
+      @NonNull Chip chipStreak, @NonNull Chip chipXp, @NonNull PieChart pieChartMastery,
+      @NonNull LinearProgressIndicator progressLoading,
+      @NonNull RecyclerView recyclerStreakCalendar, @NonNull RecyclerView recyclerWeakTopics,
+      @NonNull MaterialToolbar toolbar, @NonNull TextView tvWeakEmpty) {
     this.rootView = rootView;
+    this.barChartWeekly = barChartWeekly;
     this.bottomNav = bottomNav;
+    this.chipStreak = chipStreak;
+    this.chipXp = chipXp;
+    this.pieChartMastery = pieChartMastery;
+    this.progressLoading = progressLoading;
+    this.recyclerStreakCalendar = recyclerStreakCalendar;
+    this.recyclerWeakTopics = recyclerWeakTopics;
+    this.toolbar = toolbar;
+    this.tvWeakEmpty = tvWeakEmpty;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -54,6 +101,12 @@ public final class ActivityProgressBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.barChartWeekly;
+      BarChart barChartWeekly = ViewBindings.findChildViewById(rootView, id);
+      if (barChartWeekly == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNav;
       View bottomNav = ViewBindings.findChildViewById(rootView, id);
       if (bottomNav == null) {
@@ -61,7 +114,57 @@ public final class ActivityProgressBinding implements ViewBinding {
       }
       BottomNavBinding binding_bottomNav = BottomNavBinding.bind(bottomNav);
 
-      return new ActivityProgressBinding((ConstraintLayout) rootView, binding_bottomNav);
+      id = R.id.chipStreak;
+      Chip chipStreak = ViewBindings.findChildViewById(rootView, id);
+      if (chipStreak == null) {
+        break missingId;
+      }
+
+      id = R.id.chipXp;
+      Chip chipXp = ViewBindings.findChildViewById(rootView, id);
+      if (chipXp == null) {
+        break missingId;
+      }
+
+      id = R.id.pieChartMastery;
+      PieChart pieChartMastery = ViewBindings.findChildViewById(rootView, id);
+      if (pieChartMastery == null) {
+        break missingId;
+      }
+
+      id = R.id.progressLoading;
+      LinearProgressIndicator progressLoading = ViewBindings.findChildViewById(rootView, id);
+      if (progressLoading == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerStreakCalendar;
+      RecyclerView recyclerStreakCalendar = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerStreakCalendar == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerWeakTopics;
+      RecyclerView recyclerWeakTopics = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerWeakTopics == null) {
+        break missingId;
+      }
+
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
+        break missingId;
+      }
+
+      id = R.id.tvWeakEmpty;
+      TextView tvWeakEmpty = ViewBindings.findChildViewById(rootView, id);
+      if (tvWeakEmpty == null) {
+        break missingId;
+      }
+
+      return new ActivityProgressBinding((CoordinatorLayout) rootView, barChartWeekly,
+          binding_bottomNav, chipStreak, chipXp, pieChartMastery, progressLoading,
+          recyclerStreakCalendar, recyclerWeakTopics, toolbar, tvWeakEmpty);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

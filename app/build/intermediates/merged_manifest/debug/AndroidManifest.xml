@@ -83,6 +83,10 @@
             android:name="com.zira.app.ui.quiz.ResultActivity"
             android:exported="false"
             android:parentActivityName="com.zira.app.ui.quiz.QuizActivity" />
+        <activity
+            android:name="com.zira.app.ui.schedule.ScheduleActivity"
+            android:exported="false"
+            android:parentActivityName="com.zira.app.ui.profile.ProfileActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

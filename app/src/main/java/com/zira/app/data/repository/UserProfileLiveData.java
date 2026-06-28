@@ -8,6 +8,9 @@ import com.google.firebase.firestore.ListenerRegistration;
 import com.zira.app.data.model.UserProfile;
 import com.zira.app.utils.Constants;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /** LiveData that observes {@code users/{uid}} and auto-removes the Firestore listener. */
 class UserProfileLiveData extends LiveData<UserProfile> {
 
@@ -49,6 +52,8 @@ class UserProfileLiveData extends LiveData<UserProfile> {
         profile.dailyGoalMins = goal != null ? goal.intValue() : Constants.DEFAULT_DAILY_GOAL_MINS;
         Long xp = snapshot.getLong(Constants.FIELD_TOTAL_XP);
         profile.totalXp = xp != null ? xp.intValue() : 0;
+        List<String> subjects = (List<String>) snapshot.get(Constants.FIELD_SUBJECTS);
+        profile.subjects = subjects != null ? new ArrayList<>(subjects) : new ArrayList<>();
         return profile;
     }
 }

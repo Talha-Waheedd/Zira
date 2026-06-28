@@ -74,4 +74,23 @@ public final class DateUtils {
         }
         return "Good evening";
     }
+
+    /** @return start-of-day millis for the day that is {@code daysAgo} days before today. */
+    public static long startOfDayDaysAgo(int daysAgo) {
+        return startOfToday() - (long) daysAgo * ONE_DAY_MILLIS;
+    }
+
+    /** @return short day label (e.g. "Mon") for a millis timestamp. */
+    @NonNull
+    public static String dayLabel(long millis) {
+        return new java.text.SimpleDateFormat("EEE", Locale.getDefault())
+                .format(new java.util.Date(millis));
+    }
+
+    /** @return {@code true} if {@code millis} falls within the calendar day {@code daysAgo}. */
+    public static boolean isDaysAgo(long millis, int daysAgo) {
+        long dayStart = startOfDayDaysAgo(daysAgo);
+        long dayEnd = dayStart + ONE_DAY_MILLIS - 1;
+        return millis >= dayStart && millis <= dayEnd;
+    }
 }

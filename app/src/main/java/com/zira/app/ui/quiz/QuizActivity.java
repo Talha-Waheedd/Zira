@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.zira.app.R;
 import com.zira.app.data.remote.model.QuizResponse;
 import com.zira.app.utils.Constants;
+import com.zira.app.utils.NetworkUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -138,6 +139,10 @@ public class QuizActivity extends AppCompatActivity {
             selectedDifficulty = getSelectedDifficulty();
             if (userId == null) {
                 Snackbar.make(panelSetup, R.string.error_auth_failed, Snackbar.LENGTH_SHORT).show();
+                return;
+            }
+            if (!NetworkUtils.isConnected(this)) {
+                Snackbar.make(panelSetup, R.string.error_offline, Snackbar.LENGTH_LONG).show();
                 return;
             }
             viewModel.loadQuiz(selectedSubject, selectedDifficulty, userId);

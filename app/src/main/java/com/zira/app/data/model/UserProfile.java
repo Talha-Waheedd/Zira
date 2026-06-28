@@ -8,6 +8,7 @@ public class UserProfile {
     public int streakCount;
     public int dailyGoalMins;
     public int totalXp;
+    public java.util.List<String> subjects = new java.util.ArrayList<>();
 
     public UserProfile() {
     }
