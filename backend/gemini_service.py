@@ -9,7 +9,7 @@ from typing import Any
 
 import google.generativeai as genai
 
-DEFAULT_MODEL = "gemini-1.5-flash"
+DEFAULT_MODEL = "gemini-2.0-flash"
 
 SYSTEM_BASE = (
     "You are Zira, an AI study companion for university students in Pakistan. "
