@@ -6,7 +6,7 @@ from fastapi import APIRouter, HTTPException
 
 from gemini_service import SYSTEM_BASE, ask_gemini_json
 from models import QuizRequest, QuizResponse
-from routers.deps import require_gemini
+from routers.deps import require_llm
 
 router = APIRouter()
 logger = logging.getLogger("zira.quiz")
@@ -14,7 +14,7 @@ logger = logging.getLogger("zira.quiz")
 
 @router.post("/api/quiz", response_model=QuizResponse)
 def quiz(request: QuizRequest) -> QuizResponse:
-    require_gemini()
+    require_llm()
 
     count = max(1, min(request.count, 10))
     system = (

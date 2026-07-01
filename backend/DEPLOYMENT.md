@@ -75,7 +75,8 @@ In the service's **Environment** tab, add:
 | Key | Value |
 | --- | --- |
 | `GOOGLE_API_KEY` | *your Gemini key* |
-| `GEMINI_MODEL` | `gemini-1.5-flash` (optional) |
+| `GEMINI_MODEL` | `gemini-2.5-flash` |
+| `GROQ_API_KEY` | *(optional)* Groq fallback key |
 | `ALLOWED_ORIGINS` | `*` (optional) |
 
 Click **Save Changes** — Render redeploys automatically.

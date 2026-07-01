@@ -2,16 +2,20 @@
 
 from fastapi import HTTPException
 
-from gemini_service import is_gemini_configured
+from llm_service import is_llm_configured
 
 
-def require_gemini() -> None:
-    """Raise 503 if the Gemini API key is not configured."""
-    if not is_gemini_configured():
+def require_llm() -> None:
+    """Raise 503 if no LLM API key (Gemini or Groq) is configured."""
+    if not is_llm_configured():
         raise HTTPException(
             status_code=503,
             detail=(
-                "Gemini API is not configured. Set GOOGLE_API_KEY in the environment "
-                "(.env locally, or Render dashboard env var) and restart the server."
+                "No LLM API key configured. Set GOOGLE_API_KEY and/or GROQ_API_KEY "
+                "in the environment and restart the server."
             ),
         )
+
+
+# Backward-compatible alias
+require_gemini = require_llm

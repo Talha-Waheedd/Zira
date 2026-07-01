@@ -19,6 +19,7 @@ import com.zira.app.data.local.entity.ExplanationEntity;
 import com.zira.app.data.model.UserProfile;
 import com.zira.app.ui.BaseNavActivity;
 import com.zira.app.ui.ask.AskActivity;
+import com.zira.app.ui.flashcards.FlashcardActivity;
 import com.zira.app.ui.flashcards.FlashcardReviewActivity;
 import com.zira.app.ui.quiz.QuizActivity;
 
@@ -35,6 +36,7 @@ public class HomeActivity extends BaseNavActivity
 
     private HomeViewModel viewModel;
     private RecentExplanationAdapter recentAdapter;
+    private int dueFlashcardCount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -78,28 +80,33 @@ public class HomeActivity extends BaseNavActivity
         findViewById(R.id.cardQuiz).setOnClickListener(v ->
                 startActivity(new Intent(this, QuizActivity.class)));
 
-        btnReviewNow.setOnClickListener(v ->
-                startActivity(new Intent(this, FlashcardReviewActivity.class)));
+        btnReviewNow.setOnClickListener(v -> openReviewDue());
 
-        findViewById(R.id.cardReview).setOnClickListener(v -> {
-            if (btnReviewNow.isEnabled()) {
-                startActivity(new Intent(this, FlashcardReviewActivity.class));
-            }
-        });
+        findViewById(R.id.cardReview).setOnClickListener(v -> openReviewDue());
+    }
+
+    private void openReviewDue() {
+        if (dueFlashcardCount > 0) {
+            startActivity(new Intent(this, FlashcardReviewActivity.class));
+        } else {
+            Snackbar.make(findViewById(R.id.cardReview), R.string.flashcard_no_due, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.nav_flashcards, v ->
+                            startActivity(new Intent(this, FlashcardActivity.class)))
+                    .show();
+        }
     }
 
     private void observeViewModel() {
         viewModel.getUserProfile().observe(this, this::bindUserProfile);
 
         viewModel.getDueFlashcardCount().observe(this, count -> {
-            int due = count != null ? count : 0;
-            if (due > 0) {
-                tvReviewDue.setText(getString(R.string.home_review_due, due));
-                btnReviewNow.setEnabled(true);
-            } else {
-                tvReviewDue.setText(R.string.home_review_none);
-                btnReviewNow.setEnabled(false);
-            }
+            dueFlashcardCount = count != null ? count : 0;
+            boolean hasDue = dueFlashcardCount > 0;
+            tvReviewDue.setText(hasDue
+                    ? getString(R.string.home_review_due, dueFlashcardCount)
+                    : getString(R.string.home_review_none));
+            btnReviewNow.setEnabled(hasDue);
+            btnReviewNow.setAlpha(hasDue ? 1f : 0.5f);
         });
 
         viewModel.getRecentExplanations().observe(this, explanations -> {

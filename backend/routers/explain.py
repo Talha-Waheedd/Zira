@@ -6,7 +6,7 @@ from fastapi import APIRouter, HTTPException
 
 from gemini_service import SYSTEM_BASE, ask_gemini_json
 from models import ExplanationRequest, ExplanationResponse
-from routers.deps import require_gemini
+from routers.deps import require_llm
 
 router = APIRouter()
 logger = logging.getLogger("zira.explain")
@@ -14,7 +14,7 @@ logger = logging.getLogger("zira.explain")
 
 @router.post("/api/explain", response_model=ExplanationResponse)
 def explain(request: ExplanationRequest) -> ExplanationResponse:
-    require_gemini()
+    require_llm()
 
     system = (
         f"{SYSTEM_BASE}\n\n"

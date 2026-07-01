@@ -1,11 +1,13 @@
 package com.zira.app.ui.ask;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,6 +49,7 @@ public class AskActivity extends BaseNavActivity
         setupRecycler();
         setupInput();
         observeViewModel();
+        updateSendButtonState(false);
 
         if (savedInstanceState == null) {
             messageAdapter.addZiraMessage(getString(R.string.ask_welcome), null, true);
@@ -83,7 +86,7 @@ public class AskActivity extends BaseNavActivity
         askViewModel.isLoading().observe(this, isLoading -> {
             boolean loading = Boolean.TRUE.equals(isLoading);
             lottieTyping.setVisibility(loading ? View.VISIBLE : View.GONE);
-            fabSend.setEnabled(!loading);
+            updateSendButtonState(loading);
         });
 
         askViewModel.getResult().observe(this, response -> {
@@ -98,6 +101,16 @@ public class AskActivity extends BaseNavActivity
                 Snackbar.make(recyclerMessages, error, Snackbar.LENGTH_LONG).show();
             }
         });
+    }
+
+    private void updateSendButtonState(boolean loading) {
+        fabSend.setClickable(!loading);
+        fabSend.setFocusable(!loading);
+        fabSend.setAlpha(loading ? 0.78f : 1f);
+        int primary = ContextCompat.getColor(this, R.color.primary);
+        int onPrimary = ContextCompat.getColor(this, R.color.on_primary);
+        fabSend.setBackgroundTintList(ColorStateList.valueOf(primary));
+        fabSend.setImageTintList(ColorStateList.valueOf(onPrimary));
     }
 
     private void sendCurrentQuestion() {

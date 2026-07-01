@@ -1,5 +1,7 @@
 package com.zira.app.utils;
 
+import com.zira.app.BuildConfig;
+
 public final class Constants {
 
     private Constants() {
@@ -7,9 +9,10 @@ public final class Constants {
 
     /**
      * Base URL of the Zira FastAPI backend. MUST end with a trailing slash.
-     * Replace with your deployed backend URL (e.g. "https://api.zira.app/").
+     * Default (debug): {@code http://10.0.2.2:8000/} for Android emulator → host machine.
+     * Override in {@code local.properties}: {@code zira.api.base.url=http://YOUR_IP:8000/}
      */
-    public static final String BASE_URL = "https://your-backend-url.com/";
+    public static final String BASE_URL = BuildConfig.BASE_URL;
 
     public static final String PREFS_NAME = "zira_prefs";
     public static final String KEY_ONBOARDING_COMPLETE = "onboarding_complete";

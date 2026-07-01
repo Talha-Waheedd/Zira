@@ -1,13 +1,13 @@
-# Zira Backend (FastAPI + Google Gemini)
+# Zira Backend (FastAPI + Google Gemini / Groq)
 
 The AI backend for the Zira Android app. Generates explanations, quizzes, flashcards,
-and study schedules using **Google Gemini** (free tier).
+and study schedules using **Google Gemini** (primary) with optional **Groq** fallback.
 
 ## Endpoints
 
 | Method | Path | Purpose |
 | --- | --- | --- |
-| `GET`  | `/api/health` | Health check + whether Gemini is configured |
+| `GET`  | `/api/health` | Health check + LLM provider status |
 | `POST` | `/api/explain` | Step-by-step explanation |
 | `POST` | `/api/quiz` | Multiple-choice quiz |
 | `POST` | `/api/flashcards` | Flashcard deck |
@@ -21,19 +21,19 @@ Interactive docs (Swagger UI): `/docs`
 backend/
 ├── main.py             # FastAPI app + CORS + router registration
 ├── models.py           # Pydantic models (match the Android JSON exactly)
-├── gemini_service.py   # Google Gemini integration + JSON parsing
+├── llm_service.py      # Gemini (primary) + Groq (fallback) + model chain
+├── gemini_service.py   # Thin compatibility wrapper
 ├── routers/
-│   ├── deps.py         # shared require_gemini() guard
+│   ├── deps.py         # require_llm() guard
 │   ├── health.py       # GET  /api/health
 │   ├── explain.py      # POST /api/explain
 │   ├── quiz.py         # POST /api/quiz
 │   ├── flashcards.py   # POST /api/flashcards
 │   └── schedule.py     # POST /api/schedule
 ├── requirements.txt
-├── runtime.txt         # Python version for Render
-├── render.yaml         # Render blueprint (one-click deploy)
-├── Procfile            # process command (Render/Heroku-style hosts)
-└── .env.example        # copy to .env and add your key
+├── runtime.txt
+├── render.yaml
+└── .env.example
 ```
 
 ## Run locally
@@ -42,30 +42,56 @@ backend/
 cd D:\Zira\backend
 pip install -r requirements.txt
 
-# 1. Get a FREE Gemini API key: https://aistudio.google.com/app/apikey
-# 2. Create your .env:
+# 1. Get a FREE Gemini key: https://aistudio.google.com/app/apikey
+# 2. (Optional) Groq fallback key: https://console.groq.com/keys
 copy .env.example .env
-#    then edit .env and set GOOGLE_API_KEY=...
+#    edit .env — set GOOGLE_API_KEY=...
 
-# 3. Start the server
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Verify:
+Verify: http://localhost:8000/api/health
 
-- Health: http://localhost:8000/api/health → `{"status":"ok",...,"gemini_configured":true}`
-- Docs:   http://localhost:8000/docs
+```json
+{
+  "status": "ok",
+  "service": "zira-backend",
+  "gemini_configured": true,
+  "groq_configured": false,
+  "llm_configured": true,
+  "providers": ["gemini"],
+  "default_gemini_model": "gemini-2.5-flash"
+}
+```
 
 ## Environment variables
 
 | Variable | Required | Default | Notes |
 | --- | --- | --- | --- |
-| `GOOGLE_API_KEY` | Yes | — | From Google AI Studio |
-| `GEMINI_MODEL` | No | `gemini-1.5-flash` | Any Gemini model id |
-| `ALLOWED_ORIGINS` | No | `*` | Comma-separated origins, or `*` for all |
-| `PORT` | No | `8000` | Set automatically by Render |
+| `GOOGLE_API_KEY` | Yes* | — | Google AI Studio key |
+| `GROQ_API_KEY` | No | — | Optional fallback when Gemini fails |
+| `GEMINI_MODEL` | No | auto chain | Do **not** use `gemini-2.0-flash` (shut down 2026) |
+| `GROQ_MODEL` | No | `llama-3.3-70b-versatile` | Groq model when fallback is used |
+| `ALLOWED_ORIGINS` | No | `*` | CORS origins |
+| `PORT` | No | `8000` | Set by Render automatically |
+
+\*At least one of `GOOGLE_API_KEY` or `GROQ_API_KEY` is required.
+
+### Gemini model chain (when `GEMINI_MODEL` is unset)
+
+1. `gemini-2.5-flash`
+2. `gemini-2.5-flash-lite`
+3. `gemini-3-flash-preview`
+
+Deprecated models (`gemini-2.0-flash`, `gemini-1.5-flash`, etc.) are **ignored**
+if set via `GEMINI_MODEL`.
 
 ## Deploy
 
-See **[DEPLOYMENT.md](DEPLOYMENT.md)** for a free Render.com walkthrough that gives the
-backend a permanent public HTTPS URL.
+See **[DEPLOYMENT.md](DEPLOYMENT.md)** for Render.com (free tier).
+
+After deploy, set in Render **Environment**:
+
+- `GOOGLE_API_KEY` = your Gemini key
+- `GEMINI_MODEL` = `gemini-2.5-flash` (recommended)
+- `GROQ_API_KEY` = optional Groq fallback key

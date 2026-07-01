@@ -2070,15 +2070,20 @@
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
+    <string name="error_ask_failed">Zira couldn\'t answer that. Please try again.</string>
     <string name="error_auth_failed">Authentication failed. Please try again.</string>
     <string name="error_empty_email">Please enter your email</string>
     <string name="error_empty_name">Please enter your name</string>
     <string name="error_empty_password">Please enter your password</string>
+    <string name="error_flashcards_failed">Could not generate flashcards. Please try again.</string>
     <string name="error_icon_content_description">Error</string>
     <string name="error_network">Network error. Please check your connection.</string>
     <string name="error_no_subjects">Please select at least one subject</string>
     <string name="error_offline">You\'re offline. Connect to the internet to use Zira\'s AI features.</string>
     <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_quiz_failed">Could not load quiz. Please try again.</string>
+    <string name="error_schedule_failed">Could not generate schedule. Please try again.</string>
+    <string name="error_server_busy">Zira\'s AI service is busy. Please wait a moment and try again.</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
@@ -2093,6 +2098,7 @@
     <string name="flashcard_hard">Hard · tomorrow</string>
     <string name="flashcard_medium">Medium · +3 days</string>
     <string name="flashcard_no_due">No cards due for review right now. Great job!</string>
+    <string name="flashcard_no_due_short">None due today</string>
     <string name="flashcard_progress">Card %1$d of %2$d</string>
     <string name="flashcard_rate_prompt">How well did you know this?</string>
     <string name="flashcard_rate_subtitle">This helps Zira schedule your next review</string>
@@ -2116,7 +2122,7 @@
     <string name="home_recent_empty">Ask Zira a question to see explanations here</string>
     <string name="home_recent_title">Recent Explanations</string>
     <string name="home_review_due">%d flashcards due</string>
-    <string name="home_review_none">All caught up!</string>
+    <string name="home_review_none">All caught up! Generate flashcards to start reviewing.</string>
     <string name="home_review_title">Today\'s Review</string>
     <string name="home_streak">%d day streak</string>
     <string name="home_streak_zero">Start your streak today!</string>
@@ -6768,7 +6774,7 @@
         <item name="android:windowBackground">@drawable/compat_splash_screen</item>
         <item name="splashScreenIconSize">@dimen/splashscreen_icon_size_with_background</item>
     </style>
-    <style name="Theme.Zira" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.Zira" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorOnPrimary">@color/on_primary</item>
         <item name="colorPrimaryContainer">@color/primary_container</item>

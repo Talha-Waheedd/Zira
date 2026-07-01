@@ -6,7 +6,7 @@ from fastapi import APIRouter, HTTPException
 
 from gemini_service import SYSTEM_BASE, ask_gemini_json
 from models import FlashcardRequest, FlashcardResponse
-from routers.deps import require_gemini
+from routers.deps import require_llm
 
 router = APIRouter()
 logger = logging.getLogger("zira.flashcards")
@@ -14,7 +14,7 @@ logger = logging.getLogger("zira.flashcards")
 
 @router.post("/api/flashcards", response_model=FlashcardResponse)
 def flashcards(request: FlashcardRequest) -> FlashcardResponse:
-    require_gemini()
+    require_llm()
 
     count = max(1, min(request.count, 20))
     system = (

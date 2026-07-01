@@ -82,7 +82,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:contentDescription="@string/ask_send"
+            app:backgroundTint="@color/primary"
             app:fabSize="normal"
+            app:rippleColor="@color/primary_container"
             app:srcCompat="@drawable/ic_send"
             app:tint="@color/on_primary" />
 

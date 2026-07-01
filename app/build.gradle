@@ -7,12 +7,21 @@ android {
     namespace 'com.zira.app'
     compileSdk 34
 
+    def localProps = new Properties()
+    def localPropsFile = rootProject.file('local.properties')
+    if (localPropsFile.exists()) {
+        localProps.load(localPropsFile.newDataInputStream())
+    }
+    // Override in local.properties: zira.api.base.url=http://192.168.x.x:8000/
+    def apiBaseUrl = localProps.getProperty('zira.api.base.url', 'http://10.0.2.2:8000/')
+
     defaultConfig {
         applicationId "com.zira.app"
         minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0.0"
+        buildConfigField "String", "BASE_URL", "\"${apiBaseUrl}\""
     }
 
     buildTypes {
@@ -30,6 +39,7 @@ android {
 
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
 }
 

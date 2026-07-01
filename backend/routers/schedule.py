@@ -8,7 +8,7 @@ from fastapi import APIRouter, HTTPException
 
 from gemini_service import SYSTEM_BASE, ask_gemini_json
 from models import ScheduleRequest, ScheduleResponse
-from routers.deps import require_gemini
+from routers.deps import require_llm
 
 router = APIRouter()
 logger = logging.getLogger("zira.schedule")
@@ -16,7 +16,7 @@ logger = logging.getLogger("zira.schedule")
 
 @router.post("/api/schedule", response_model=ScheduleResponse)
 def schedule(request: ScheduleRequest) -> ScheduleResponse:
-    require_gemini()
+    require_llm()
 
     if not request.exams:
         raise HTTPException(status_code=400, detail="At least one exam is required.")

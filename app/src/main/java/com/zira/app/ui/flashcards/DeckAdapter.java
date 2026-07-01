@@ -90,7 +90,11 @@ public class DeckAdapter extends RecyclerView.Adapter<DeckAdapter.DeckViewHolder
             int due = summary != null ? summary.dueCount : 0;
 
             tvCardCount.setText(itemView.getContext().getString(R.string.flashcard_count, total));
-            tvDueCount.setText(itemView.getContext().getString(R.string.flashcard_due, due));
+
+            boolean hasDue = due > 0;
+            tvDueCount.setText(hasDue
+                    ? itemView.getContext().getString(R.string.flashcard_due, due)
+                    : itemView.getContext().getString(R.string.flashcard_no_due_short));
 
             btnGenerate.setOnClickListener(v -> {
                 if (listener != null) {
@@ -98,7 +102,8 @@ public class DeckAdapter extends RecyclerView.Adapter<DeckAdapter.DeckViewHolder
                 }
             });
 
-            btnReview.setEnabled(due > 0);
+            btnReview.setEnabled(hasDue);
+            btnReview.setAlpha(hasDue ? 1f : 0.45f);
             btnReview.setOnClickListener(v -> {
                 if (listener != null) {
                     listener.onReviewDeck(subject, due);

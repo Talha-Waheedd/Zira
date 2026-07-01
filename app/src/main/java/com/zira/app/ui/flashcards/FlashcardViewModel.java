@@ -7,10 +7,12 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.zira.app.R;
 import com.zira.app.data.local.entity.DeckSummary;
 import com.zira.app.data.local.entity.FlashcardEntity;
 import com.zira.app.data.remote.model.FlashcardResponse;
 import com.zira.app.data.repository.ZiraRepository;
+import com.zira.app.utils.ApiErrorUtils;
 import com.zira.app.utils.Constants;
 import com.zira.app.utils.Sm2Utils;
 
@@ -23,6 +25,7 @@ import retrofit2.Response;
 public class FlashcardViewModel extends AndroidViewModel {
 
     private final ZiraRepository repository;
+    private final android.content.Context appContext;
 
     private final MutableLiveData<Boolean> loadingLiveData = new MutableLiveData<>(false);
     private final MutableLiveData<String> errorLiveData = new MutableLiveData<>();
@@ -31,6 +34,7 @@ public class FlashcardViewModel extends AndroidViewModel {
     public FlashcardViewModel(@NonNull Application application) {
         super(application);
         repository = new ZiraRepository(application);
+        appContext = application.getApplicationContext();
     }
 
     public LiveData<List<DeckSummary>> getDeckSummaries() {
@@ -61,6 +65,8 @@ public class FlashcardViewModel extends AndroidViewModel {
     }
 
     public void generateDeck(String subject, String userId) {
+        errorLiveData.setValue(null);
+        successLiveData.setValue(null);
         loadingLiveData.setValue(true);
 
         repository.generateFlashcards(
@@ -80,8 +86,10 @@ public class FlashcardViewModel extends AndroidViewModel {
                             successLiveData.postValue(
                                     count + " cards added to " + subject);
                         } else {
+                            ApiErrorUtils.logHttpError("FlashcardViewModel", response);
                             errorLiveData.postValue(
-                                    "Could not generate flashcards. Please try again.");
+                                    ApiErrorUtils.userMessageForHttp(
+                                            appContext, response, R.string.error_flashcards_failed));
                         }
                     }
 
@@ -89,8 +97,9 @@ public class FlashcardViewModel extends AndroidViewModel {
                     public void onFailure(@NonNull Call<FlashcardResponse> call,
                                          @NonNull Throwable t) {
                         loadingLiveData.postValue(false);
+                        ApiErrorUtils.logNetworkFailure("FlashcardViewModel", t);
                         errorLiveData.postValue(
-                                "Network error. Please check your connection.");
+                                ApiErrorUtils.userMessageForFailure(appContext, t));
                     }
                 });
     }

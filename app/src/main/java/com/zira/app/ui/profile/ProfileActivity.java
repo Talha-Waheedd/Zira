@@ -97,8 +97,10 @@ public class ProfileActivity extends BaseNavActivity {
         switchDarkMode.setChecked(PrefsHelper.isDarkMode(this));
         switchNotifications.setChecked(PrefsHelper.areNotificationsEnabled(this));
 
-        switchDarkMode.setOnCheckedChangeListener((btn, checked) ->
-                PrefsHelper.setDarkMode(ProfileActivity.this, checked));
+        switchDarkMode.setOnCheckedChangeListener((btn, checked) -> {
+            PrefsHelper.setDarkMode(ProfileActivity.this, checked);
+            recreate();
+        });
 
         switchNotifications.setOnCheckedChangeListener((btn, checked) ->
                 PrefsHelper.setNotificationsEnabled(ProfileActivity.this, checked));

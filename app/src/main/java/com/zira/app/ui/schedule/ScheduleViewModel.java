@@ -9,9 +9,11 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.zira.app.R;
 import com.zira.app.data.remote.model.ScheduleRequest;
 import com.zira.app.data.remote.model.ScheduleResponse;
 import com.zira.app.data.repository.ZiraRepository;
+import com.zira.app.utils.ApiErrorUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +25,7 @@ import retrofit2.Response;
 public class ScheduleViewModel extends AndroidViewModel {
 
     private final ZiraRepository repository;
+    private final android.content.Context appContext;
     private final String userId;
 
     private final MutableLiveData<List<ScheduleResponse.ScheduleItem>> scheduleLiveData =
@@ -33,6 +36,7 @@ public class ScheduleViewModel extends AndroidViewModel {
     public ScheduleViewModel(@NonNull Application application) {
         super(application);
         repository = new ZiraRepository(application);
+        appContext = application.getApplicationContext();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         userId = user != null ? user.getUid() : null;
     }
@@ -62,7 +66,13 @@ public class ScheduleViewModel extends AndroidViewModel {
             return;
         }
 
+        if (userId == null) {
+            errorLiveData.setValue("Please sign in again.");
+            return;
+        }
+
         loadingLiveData.setValue(true);
+        errorLiveData.setValue(null);
         repository.getSchedule(apiExams, dailyMins, userId, new Callback<ScheduleResponse>() {
             @Override
             public void onResponse(@NonNull Call<ScheduleResponse> call,
@@ -72,14 +82,19 @@ public class ScheduleViewModel extends AndroidViewModel {
                         && response.body().getSchedule() != null) {
                     scheduleLiveData.postValue(response.body().getSchedule());
                 } else {
-                    errorLiveData.postValue("Could not generate schedule. Please try again.");
+                    ApiErrorUtils.logHttpError("ScheduleViewModel", response);
+                    errorLiveData.postValue(
+                            ApiErrorUtils.userMessageForHttp(
+                                    appContext, response, R.string.error_schedule_failed));
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<ScheduleResponse> call, @NonNull Throwable t) {
                 loadingLiveData.postValue(false);
-                errorLiveData.postValue("Network error. Please check your connection.");
+                ApiErrorUtils.logNetworkFailure("ScheduleViewModel", t);
+                errorLiveData.postValue(
+                        ApiErrorUtils.userMessageForFailure(appContext, t));
             }
         });
     }

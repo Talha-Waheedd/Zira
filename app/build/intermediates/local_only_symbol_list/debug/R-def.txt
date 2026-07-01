@@ -241,14 +241,19 @@ string difficulty_hard
 string difficulty_medium
 string display_name
 string email
+string error_ask_failed
 string error_auth_failed
 string error_empty_email
 string error_empty_name
 string error_empty_password
+string error_flashcards_failed
 string error_network
 string error_no_subjects
 string error_offline
 string error_password_mismatch
+string error_quiz_failed
+string error_schedule_failed
+string error_server_busy
 string flashcard_count
 string flashcard_due
 string flashcard_easy
@@ -257,6 +262,7 @@ string flashcard_generate
 string flashcard_hard
 string flashcard_medium
 string flashcard_no_due
+string flashcard_no_due_short
 string flashcard_progress
 string flashcard_rate_prompt
 string flashcard_rate_subtitle
@@ -371,3 +377,4 @@ style TextAppearance.Zira.TitleLarge
 style TextAppearance.Zira.TitleMedium
 style Theme.Zira
 style Theme.Zira.Splash
+xml network_security_config

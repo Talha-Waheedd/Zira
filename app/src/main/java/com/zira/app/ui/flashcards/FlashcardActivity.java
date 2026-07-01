@@ -121,6 +121,8 @@ public class FlashcardActivity extends BaseNavActivity implements DeckAdapter.De
     public void onReviewDeck(String subject, int dueCount) {
         if (dueCount > 0) {
             startReview(subject);
+        } else {
+            Snackbar.make(recyclerDecks, R.string.flashcard_no_due, Snackbar.LENGTH_LONG).show();
         }
     }
 

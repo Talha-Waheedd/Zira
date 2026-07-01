@@ -28,9 +28,9 @@ public final class PrefsHelper {
     }
 
     public static void applySavedTheme(Context context) {
-        if (isDarkMode(context)) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }
+        AppCompatDelegate.setDefaultNightMode(isDarkMode(context)
+                ? AppCompatDelegate.MODE_NIGHT_YES
+                : AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     public static boolean areNotificationsEnabled(Context context) {

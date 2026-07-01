@@ -7,8 +7,10 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.zira.app.R;
 import com.zira.app.data.remote.model.QuizResponse;
 import com.zira.app.data.repository.ZiraRepository;
+import com.zira.app.utils.ApiErrorUtils;
 import com.zira.app.utils.Constants;
 
 import java.util.List;
@@ -20,6 +22,7 @@ import retrofit2.Response;
 public class QuizViewModel extends AndroidViewModel {
 
     private final ZiraRepository repository;
+    private final android.content.Context appContext;
 
     private final MutableLiveData<List<QuizResponse.QuizQuestion>> questionsLiveData =
             new MutableLiveData<>();
@@ -29,6 +32,7 @@ public class QuizViewModel extends AndroidViewModel {
     public QuizViewModel(@NonNull Application application) {
         super(application);
         repository = new ZiraRepository(application);
+        appContext = application.getApplicationContext();
     }
 
     public LiveData<List<QuizResponse.QuizQuestion>> getQuestions() {
@@ -44,6 +48,7 @@ public class QuizViewModel extends AndroidViewModel {
     }
 
     public void loadQuiz(String subject, String difficulty, String userId) {
+        errorLiveData.setValue(null);
         loadingLiveData.setValue(true);
 
         repository.getQuiz(
@@ -61,8 +66,10 @@ public class QuizViewModel extends AndroidViewModel {
                                 && !response.body().getQuestions().isEmpty()) {
                             questionsLiveData.postValue(response.body().getQuestions());
                         } else {
+                            ApiErrorUtils.logHttpError("QuizViewModel", response);
                             errorLiveData.postValue(
-                                    "Could not load quiz. Please try again.");
+                                    ApiErrorUtils.userMessageForHttp(
+                                            appContext, response, R.string.error_quiz_failed));
                         }
                     }
 
@@ -70,8 +77,9 @@ public class QuizViewModel extends AndroidViewModel {
                     public void onFailure(@NonNull Call<QuizResponse> call,
                                           @NonNull Throwable t) {
                         loadingLiveData.postValue(false);
+                        ApiErrorUtils.logNetworkFailure("QuizViewModel", t);
                         errorLiveData.postValue(
-                                "Network error. Please check your connection.");
+                                ApiErrorUtils.userMessageForFailure(appContext, t));
                     }
                 });
     }

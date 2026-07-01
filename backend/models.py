@@ -95,3 +95,7 @@ class HealthResponse(BaseModel):
     status: str
     service: str
     gemini_configured: bool
+    groq_configured: bool = False
+    llm_configured: bool = False
+    providers: list[str] = Field(default_factory=list)
+    default_gemini_model: str = ""
